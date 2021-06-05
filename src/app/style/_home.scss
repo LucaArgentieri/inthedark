@@ -1,0 +1,23 @@
+//Scss della home
+.home {
+  background-image: url("../assets/images/homeImg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+
+  .home_container {
+    height: 100vh;
+
+    img {
+      height: 20%;
+    }
+  }
+
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+  }
+}
