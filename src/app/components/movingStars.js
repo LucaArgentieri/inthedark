@@ -41,14 +41,17 @@ export default function Loader() {
     }
 
     function animate() {
-        ctx.backgroundColor = 0x152E67
-        ctx.save();
-        ctx.clearRect(0, 0, cW, cH);
-        starField();
-        ctx.restore();
+      ctx.save();
+      ctx.clearRect(0, 0, cW, cH);
+      starField();
+      ctx.restore();
     }
 
-    var animateInterval = setInterval(animate, 100);
+    const animateInterval = () => {
+      setInterval(animate, 100);
+    };
+
+    animateInterval()
   }, []);
   return <canvas ref={canvasRef} />;
 }
