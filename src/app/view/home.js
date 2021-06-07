@@ -1,6 +1,7 @@
 import React from 'react'
 import Logo from '../assets/svg/logo.svg'
 import CanvasSky from '../components/canvasSky'
+import MovingStars from '../components/movingStars'
 
 import {Link} from 'react-router-dom'
 
@@ -14,6 +15,7 @@ export default function Home() {
                 <Link to="/" className="enter_btn fs-36 c-white nobleman">Enter</Link>
             </div>
             <CanvasSky />
+            <MovingStars />
         </div>
     )
 }

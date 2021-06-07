@@ -1,54 +1,13 @@
 import React, { useRef, useEffect } from "react";
 
-export default function CanvasSky(props) {
+export default function CanvasSky() {
   const canvasRef = useRef(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
 
-    // ctx.canvas.width = window.innerWidth;
-    // ctx.canvas.height = window.innerHeight;
-
-    // var cW = canvas.width;
-    // var cH = canvas.height;
-
-    // var stars = [];
-
-    // function addStar() {
-    //   var x = Math.floor(Math.random() * cW);
-    //   var y = Math.floor(Math.random() * cH) + 1;
-    //   var s = Math.floor(Math.random() * 15) + 1;
-
-    //   stars.push({ x: x, y: y, s: s });
-    // }
-
-    // function starField() {
-    //   addStar();
-    //   for (var i = 0; i < stars.length; i++) {
-    //     ctx.fillStyle = "rgba(255, 255, 255, 1)";
-    //     ctx.fillRect(
-    //       stars[i].x++,
-    //       stars[i].y,
-    //       stars[i].s * 0.15,
-    //       stars[i].s * 0.15
-    //     );
-    //     ctx.fill();
-    //     if (stars[i].x > cW) {
-    //       stars.splice(i, 1);
-    //     }
-    //   }
-    // }
-
-    // function animate() {
-    //   ctx.save();
-    //   ctx.clearRect(0, 0, cW, cH);
-    //   starField();
-    //   ctx.restore();
-    // }
-
-    // var animateInterval = setInterval(animate, 60);
-
+  //Stelle fisse
     function randomInt(max) {
       return Math.floor(Math.random() * max);
     }
@@ -84,8 +43,6 @@ export default function CanvasSky(props) {
     }
 
     function render() {
-      // ctx.fillStyle = backgroundColor;
-      // ctx.fillRect(0, 0, width, height);
       ctx.clearRect(0, 0, width, height);
 
       stars.forEach(function (star, i) {
@@ -96,11 +53,12 @@ export default function CanvasSky(props) {
         fillCircle(ctx, x, y, star.r, `rgba(255, 255, 255, ${opacity}`);
       });
 
+
+
       counter++;
       requestAnimationFrame(render);
     }
 
-    // const backgroundColor = "#030318";
     const width = window.innerWidth;
     const height = window.innerHeight;
     const maxStarRadius = 1.5;
@@ -113,8 +71,8 @@ export default function CanvasSky(props) {
 
     let counter = 0;
 
-    render()
+    render();
   }, []);
 
-  return <canvas ref={canvasRef} {...props} />;
+  return <canvas ref={canvasRef} />;
 }
