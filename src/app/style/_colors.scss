@@ -1,1 +1,10 @@
-$primary: red;
+$colors: (
+  black: black,
+  white: white,
+);
+
+@each $key in map-keys($colors) {
+  .c-#{$key} {
+    color: map-get($colors, $key);
+  }
+}

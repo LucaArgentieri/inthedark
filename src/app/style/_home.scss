@@ -5,12 +5,29 @@
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh;
+  overflow: hidden;
 
   .home_container {
     height: 100vh;
 
     img {
-      height: 20%;
+      height: 200px;
+      margin-bottom: 70px;
+    }
+
+    p {
+      padding-bottom: 10px;
+      text-align: center;
+    }
+
+    .subtitle {
+      padding-bottom: 200px;
+    }
+
+    .enter_btn {
+      border-bottom: 1px solid white;
+      cursor: pointer;
+      z-index: 999;
     }
   }
 
@@ -19,5 +36,24 @@
     top: 0;
     left: 0;
     height: 100vh;
+  }
+}
+
+@media (max-width: 900px) {
+  .home {
+    .home_container {
+      img {
+        height: 50px;
+      }
+
+      .title {
+        font-size: 48px;
+      }
+
+      .subtitle {
+        padding-bottom: 50px;
+        font-size: 24px;
+      }
+    }
   }
 }

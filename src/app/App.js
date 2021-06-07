@@ -11,6 +11,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="*" component={ErrorPage} />
+
         </Switch>
       </Router>
     </>

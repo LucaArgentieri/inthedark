@@ -1,0 +1,67 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Nobleman";
+  line-height: 130%;
+}
+
+.nobleman {
+  font-family: "Nobleman";
+}
+
+.athiti {
+  font-family: "Athiti", sans-serif;
+}
+
+.extralight {
+  font-weight: 200;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.semibold {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.upcase,
+.uppercase {
+  text-transform: uppercase;
+}
+
+$fontsizes: (
+  14: 14px,
+  18: 18px,
+  24: 24px,
+  36: 36px,
+  48: 48px,
+  64: 64px,
+  72: 72px,
+  96: 96px,
+);
+
+@each $key in map-keys($fontsizes) {
+  .fs-#{$key} {
+    font-size: map-get($fontsizes, $key);
+  }
+}
