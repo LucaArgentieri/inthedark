@@ -36,10 +36,11 @@ export const rotateLogoLoader = () => {
     ".home_container .loader",
     {
       opacity: 0,
+      height: 0
     },
     {
       duration: 3.5,
-      rotateZ: 180,
+      height: 100,
       opacity: 1,
     }
   );
@@ -50,19 +51,21 @@ export const rotateLogoLoader = () => {
   });
 };
 
-export const fromOpacity = () => {
-  gsap.fromTo('.home_container', {
-    opacity: 0
-  }, {
-    opacity: 1,
-    duration: 1
-  })
-}
-
 export const animateText = () => {
   tl.from([".home_container .stonehenge"], {
     zIndex: 999,
   });
+
+  tl.fromTo(
+    [".home_container .stonehenge"],
+    {
+      opacity: 0,
+    },
+    {
+      opacity: 1,
+      duration: 1,
+    }
+  );
 
   tl.fromTo(
     [".home_container .title"],

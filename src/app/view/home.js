@@ -9,7 +9,6 @@ import {
   hoverBtn,
   removeHoverBtn,
   rotateLogoLoader,
-  fromOpacity
 } from "../animations/animations";
 
 import { Link } from "react-router-dom";
@@ -18,18 +17,17 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(true);
+    }, 5000);
+
     if (isLoading) {
-      fromOpacity();
-      rotateLogo();
       animateText();
+      rotateLogo();
     } else {
       rotateLogoLoader();
     }
   }, [isLoading]);
-
-  setTimeout(() => {
-    setIsLoading(true);
-  }, 5000);
 
   return (
     <div className="home">
