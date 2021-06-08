@@ -8,6 +8,8 @@ import {
   animateText,
   hoverBtn,
   removeHoverBtn,
+  rotateLogoLoader,
+  fromOpacity
 } from "../animations/animations";
 
 import { Link } from "react-router-dom";
@@ -17,16 +19,17 @@ export default function Home() {
 
   useEffect(() => {
     if (isLoading) {
+      fromOpacity();
       rotateLogo();
       animateText();
     } else {
-      rotateLogo();
+      rotateLogoLoader();
     }
   }, [isLoading]);
 
   setTimeout(() => {
     setIsLoading(true);
-  }, 3000);
+  }, 5000);
 
   return (
     <div className="home">
@@ -52,7 +55,7 @@ export default function Home() {
             </span>
           </>
         ) : (
-          <img className="logo" src={Logo} alt="logo" />
+          <img className="loader" src={Logo} alt="logo" />
         )}
       </div>
 

@@ -31,6 +31,34 @@ export const rotateLogo = () => {
   );
 };
 
+export const rotateLogoLoader = () => {
+  tl.fromTo(
+    ".home_container .loader",
+    {
+      opacity: 0,
+    },
+    {
+      duration: 3.5,
+      rotateZ: 180,
+      opacity: 1,
+    }
+  );
+
+  tl.to(".home_container .loader", {
+    opacity: 0,
+    duration: 1,
+  });
+};
+
+export const fromOpacity = () => {
+  gsap.fromTo('.home_container', {
+    opacity: 0
+  }, {
+    opacity: 1,
+    duration: 1
+  })
+}
+
 export const animateText = () => {
   tl.from([".home_container .stonehenge"], {
     zIndex: 999,
@@ -50,12 +78,16 @@ export const animateText = () => {
     }
   );
 
-  tl.fromTo(".home_container .subtitle", {
-    opacity: 0,
-  }, {
-    opacity: 1,
-    duration: 1
-  });
+  tl.fromTo(
+    ".home_container .subtitle",
+    {
+      opacity: 0,
+    },
+    {
+      opacity: 1,
+      duration: 1,
+    }
+  );
 
   tl.to([".home_container .stonehenge"], {
     zIndex: 996,
