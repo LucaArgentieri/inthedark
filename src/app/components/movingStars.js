@@ -48,7 +48,7 @@ export default function Loader() {
     }
 
     const animateInterval = () => {
-      setInterval(animate, 100);
+      setInterval(animate, 60);
     };
 
     animateInterval()

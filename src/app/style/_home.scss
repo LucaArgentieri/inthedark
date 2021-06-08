@@ -1,6 +1,6 @@
 //Scss della home
 .home {
-  background-image: url("../assets/images/homeImg.jpg");
+  background-image: url("../assets/images/sfondo.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -10,7 +10,7 @@
   .home_container {
     height: 100vh;
 
-    img {
+    .logo {
       height: 200px;
       margin-bottom: 70px;
     }
@@ -22,6 +22,7 @@
 
     .subtitle {
       padding-bottom: 200px;
+      z-index: 999;
     }
 
     .enter_btn {
@@ -36,6 +37,16 @@
     top: 0;
     left: 0;
     height: 100vh;
+  }
+
+  .stonehenge {
+    img {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+      z-index: 998;
+    }
   }
 }
 
