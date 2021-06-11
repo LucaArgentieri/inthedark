@@ -1,52 +1,46 @@
 //Scss della scenaPunto
 .a-bcg-body {
-    background-color: #EDEBE6;
-    height: 100%;
+  background-color: #edebe6;
+  height: 100vh;
 
-    .a-title {
-        padding-top: 4.4rem;
-        font-family: 'VVSNobleman-Display';
+  a {
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  .container {
+    .row {
+      h3.title {
         text-align: center;
-        font-size: 19px;
-        text-decoration: underline; 
+        padding: 12px 0px 12px 0px;
+      }
     }
+  }
 
-    .container{ 
-        .row{
-            h3.title{
-                font-family: 'VVSNobleman-Display';
-                text-align: center;
-                padding: 12px 0px 12px 0px;
-                font-weight:900;
-                text-transform: uppercase;
-                font-size: 2em;
-            }
-        }
-    }
-    
-    .img-position{
-        display:block;
-        margin: 0px auto;
-        text-align:center;
-    }
+  .img-position {
+    display: block;
+    margin: 0px auto;
+    text-align: center;
+  }
 
-    .txt-position{
-        font-family: 'Athiti', sans-serif;
-        line-height: 27px;
-        display:block;
-        font-weight: 500;
-        margin:0px auto;
-        text-align:center;
-        max-width: 620px;
-        text-align: justify;
-        padding-top: 1.3rem;
-    } 
-    p.n-position{
-        font-family: 'Athiti', sans-serif;
-        font-weight: 500;
-        margin: 0px 2em;
-        text-align: right;
-    }
-
+  .txt-position {
+    line-height: 27px;
+    display: block;
+    margin: 0px auto;
+    text-align: center;
+    max-width: 620px;
+    text-align: justify;
+    padding-top: 1.3rem;
+  }
+  p.n-position {
+    margin: 0px 2em;
+    text-align: right;
+  }
 }
 
+@media (max-width: 900px) {
+  .a-bcg-body {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
