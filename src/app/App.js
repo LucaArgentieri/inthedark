@@ -5,7 +5,6 @@ import HomePage from "../app/view/home";
 import Select from "./view/select"
 import ErrorPage from "../app/view/error";
 import Scene from "../app/view/Scene";
-import ScenaPunto from "../app/view/scenaPunto";
 
 function App() {
   return (
@@ -15,7 +14,6 @@ function App() {
           <Route exact path="/" component={HomePage} />
           <Route exact path="/select" component={Select} />
           <Route path="/stonehenge" component={Scene} />
-          <Route path="/scena-punto" component={ScenaPunto} />
           <Route path="*" component={ErrorPage} />
         </Switch>
       </Router>
