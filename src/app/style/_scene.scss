@@ -1,0 +1,53 @@
+$white: rgba(255, 255, 255, 0.897);
+
+#hotspots {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgb(221, 182, 160);
+}
+#hotspots .hotspot {
+  position: absolute;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+  font-size: large;
+  user-select: none;
+}
+
+#hotspots .hotspot:hover {
+  color: red;
+}
+
+.hotspot {
+  &__circle {
+    border-radius: 50%;
+    transition: width 0.2s ease-in, height 0.2s ease-in;
+    cursor: pointer;
+
+    &--outer {
+      border: 2px solid $white;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:hover {
+        width: 50px;
+        height: 50px;
+      }
+      &:hover .hotspot__circle--inner {
+        width: 10px;
+        height: 10px;
+      }
+    }
+
+    &--inner {
+      background-color: $white;
+      border-radius: 50%;
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
