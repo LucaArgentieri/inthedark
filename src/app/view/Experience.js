@@ -4,15 +4,20 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import Hotspot from "../components/Hotspot";
+// import { useHistory } from "react-router-dom";
 
-function App({ location, history }) {
+function App({ location }) {
   const webgl = useRef(null);
   const HContainer = useRef(null);
+  // const history = useHistory();
 
-  if (location.hash !==)
-  history.push
+  /* useEffect(() => {
+    if (location.hash !== "stonehenge") {
+      history.push("/experience/#stonehenge");
+    }
+  }, [location, history]); */
 
-  let hash = location.hash.substring(1);
+  const hash = location.hash.substring(1);
 
   useEffect(() => {
     // Canvas
@@ -148,6 +153,7 @@ function App({ location, history }) {
 
     tick();
   }, [hash]);
+
   return (
     <>
       <canvas id="webgl" ref={webgl}></canvas>

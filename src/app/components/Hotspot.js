@@ -9,12 +9,12 @@ const Hotspot = () => {
     const tl = gsap.timeline({ ease: Power4.easeInOut });
     const sz = document.documentElement.clientWidth;
     tl.to(".hotspot__circle--outer", {
-      width: sz * 2,
-      height: sz * 2,
+      width: sz * 2.5,
+      height: sz * 2.5,
       duration: 0.2,
     }).to(".hotspot__circle--inner", {
-      width: sz * 2,
-      height: sz * 2,
+      width: sz * 2.5,
+      height: sz * 2.5,
       backgroundColor: "#fff",
       duration: 0.2,
     });
