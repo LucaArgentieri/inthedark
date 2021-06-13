@@ -4,11 +4,12 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import Hotspot from "../components/Hotspot";
-// import { useHistory } from "react-router-dom";
 
 function App({ location }) {
   const webgl = useRef(null);
   const HContainer = useRef(null);
+  const stonehengeHotspots = useRef([]);
+  // const [hotspots, setHotspots] = useState([]);
   // const history = useHistory();
 
   /* useEffect(() => {
@@ -40,7 +41,7 @@ function App({ location }) {
     scene.add(ambientLight);
 
     const directionalLight = new THREE.DirectionalLight(0xffffff, 0.1);
-    directionalLight.castShadow = true;
+    // directionalLight.castShadow = true;
     directionalLight.position.x = 0.5;
     directionalLight.position.y = 0.2;
     directionalLight.position.z = 0.9;
@@ -104,13 +105,35 @@ function App({ location }) {
       side: THREE.DoubleSide,
       visible: false,
     });
-    const circleMesh = new THREE.Mesh(circleGeometry, circleMaterial);
-    circleMesh.position.set(0.77, 2.5, 2.66);
-    scene.add(circleMesh);
-    gui.add(circleMesh.position, "x").min(0).max(6).step(0.001);
-    gui.add(circleMesh.position, "y").min(0).max(6).step(0.001);
-    gui.add(circleMesh.position, "z").min(0).max(6).step(0.001);
-    // const hotspot = new THREE.Group()
+
+    // const createHotspot = (x, y, z) => {
+    //   const newHotspot = new THREE.Mesh(circleGeometry, circleMaterial);
+    //   scene.add(newHotspot);
+
+    //   newHotspot.position.x = x;
+    //   newHotspot.position.y = y;
+    //   newHotspot.position.z = z;
+
+    //   setHotspots((oldArray) => [...oldArray, newHotspot]);
+    //   console.log(hotspots);
+    // };
+
+    const circleMesh1 = new THREE.Mesh(circleGeometry, circleMaterial);
+    circleMesh1.position.set(1.2, 2.5, 3.1);
+    const circleMesh2 = new THREE.Mesh(circleGeometry, circleMaterial);
+    circleMesh2.position.set(-5.3, 1.65, 1.14);
+    const circleMesh3 = new THREE.Mesh(circleGeometry, circleMaterial);
+    circleMesh3.position.set(0.81, 1.855, -5.06);
+
+    stonehengeHotspots.current = [circleMesh1, circleMesh2, circleMesh3];
+
+    // createHotspot(1.2, 2.5, 3.1);
+    // createHotspot(0.77, 2.5, 2.8);
+    // createHotspot(2.2, 2.5, 1.1);
+
+    gui.add(circleMesh3.position, "x").min(-10).max(12).step(0.001);
+    gui.add(circleMesh3.position, "y").min(-10).max(12).step(0.001);
+    gui.add(circleMesh3.position, "z").min(-10).max(12).step(0.001);
 
     /*
      * RAYCASTER
@@ -125,7 +148,7 @@ function App({ location }) {
       mouse.y = -(evt.clientY / sizes.height - 0.5);
     });
 
-    circleMesh.updateWorldMatrix(true, false);
+    stonehengeHotspots.current.forEach((h) => h.updateWorldMatrix(true, false));
 
     /* RAF function */
     const tick = () => {
@@ -133,17 +156,16 @@ function App({ location }) {
       // const deltaTime = elapsedTime - previousTime;
       // previousTime = elapsedTime;
 
-      circleMesh.getWorldPosition(tempV);
+      stonehengeHotspots.current.forEach((h, i) => {
+        h.getWorldPosition(tempV);
+        tempV.project(camera);
+        // convert the normalized position to CSS coordinates
+        const x = (tempV.x * 0.5 + 0.5) * canvas.clientWidth;
+        const y = (tempV.y * -0.5 + 0.5) * canvas.clientHeight;
 
-      // Update mixer
-      tempV.project(camera);
-
-      // convert the normalized position to CSS coordinates
-      const x = (tempV.x * 0.5 + 0.5) * canvas.clientWidth;
-      const y = (tempV.y * -0.5 + 0.5) * canvas.clientHeight;
-
-      const hotspot = document.querySelector(".hotspot");
-      hotspot.style.transform = `translate(-50%, -50%) translate(${x}px,${y}px)`;
+        const hotspot = document.querySelector(`#hotspot-${i}`);
+        hotspot.style.transform = `translate(-50%, -50%) translate(${x}px,${y}px)`;
+      });
 
       controls.update();
       // Render
@@ -158,7 +180,9 @@ function App({ location }) {
     <>
       <canvas id="webgl" ref={webgl}></canvas>
       <div id="hotspots" ref={HContainer}>
-        <Hotspot />
+        <Hotspot id="0" type="stonehenge" />
+        <Hotspot id="1" type="stonehenge" />
+        <Hotspot id="2" type="stonehenge" />
       </div>
     </>
   );
