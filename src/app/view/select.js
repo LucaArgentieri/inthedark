@@ -10,7 +10,8 @@ export default function Select() {
         <img src={Logo} alt="" />
       </Link>
       <div className="select_container flex">
-        <Link to="/stonehenge"
+        <Link
+          to="/experience-stonehenge"
           onMouseEnter={(e) => selectOver(e)}
           onMouseLeave={(e) => removeOver(e)}
           className="stonehenge flex flex_center flex_column"
@@ -23,7 +24,7 @@ export default function Select() {
 
         <Link
           className="pyramid flex flex_center flex_column"
-          to="/cheops-pyramid"
+          to="/experience-cheops-pyramid"
           onMouseEnter={(e) => selectOver(e)}
           onMouseLeave={(e) => removeOver(e)}
         >

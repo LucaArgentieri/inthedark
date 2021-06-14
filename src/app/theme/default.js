@@ -17,8 +17,8 @@ theme.sizes = {
 };
 
 theme.fonts = {
-  paragraph: "Roboto",
-  title: "Arial",
+  paragraph: "athiti",
+  title: "nobleman",
 };
 
 export default theme;

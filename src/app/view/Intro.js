@@ -5,6 +5,7 @@ import theme from "../theme";
 import Image from "../components/Image";
 import firstIntro from "../assets/images/firstIntro.png";
 import secondIntro from "../assets/images/secondIntro.png";
+import { Link } from "react-router-dom";
 
 export default function Intro() {
   return (
@@ -78,7 +79,7 @@ export default function Intro() {
           size={`${theme.sizes.fontTitleBottom}`}
           font={`${theme.fonts.title}`}
         >
-          VEDI I LUOGHI ARCHEOASTRONOMICI
+          <Link to="/experience">VEDI I LUOGHI ARCHEOASTRONOMICI</Link>
         </Text>
       </Container>
     </Box>

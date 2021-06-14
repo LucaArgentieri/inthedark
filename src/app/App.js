@@ -12,8 +12,9 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route exact path="/select" component={Select} />
-          <Route path="/experience" component={Experience} />
+          <Route path="/experience" component={Select} />
+          <Route path="/experience-stonehenge" component={Experience} />
+          <Route path="/experience-cheops-pyramid" component={Experience} />
           <Route path="*" component={ErrorPage} />
         </Switch>
       </Router>

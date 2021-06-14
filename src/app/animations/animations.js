@@ -36,7 +36,7 @@ export const rotateLogoLoader = () => {
     ".home_container .loader",
     {
       opacity: 0,
-      height: 0
+      height: 0,
     },
     {
       duration: 3.5,
