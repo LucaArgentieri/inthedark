@@ -8,7 +8,7 @@ import secondIntro from "../assets/images/secondIntro.png";
 
 export default function Intro() {
   return (
-    <Box>
+    <Box className="text_box">
       <Container>
         <Text size={`${theme.sizes.fontTitle}`} font={`${theme.fonts.title}`}>
           ARCHEOASTRONOMY
