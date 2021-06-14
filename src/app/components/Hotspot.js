@@ -1,8 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import ScenaPunto from "../components/scenaPunto";
 import { gsap, Power4 } from "gsap";
 gsap.registerEase(Power4);
 
-const Hotspot = ({ id }) => {
+const Hotspot = ({ id, type }) => {
+  const [show, setShow] = useState(false);
   useEffect(() => {}, []);
 
   const openPopUp = () => {
@@ -19,14 +21,21 @@ const Hotspot = ({ id }) => {
         height: sz * 2.5,
         backgroundColor: "#fff",
         duration: 0.2,
+        onComplete: () => {
+          setShow(true);
+        },
       });
   };
   return (
-    <div className="hotspot" id={`hotspot-${id}`} onClick={openPopUp}>
-      <div className="hotspot__circle hotspot__circle--outer">
-        <div className="hotspot__circle hotspot__circle--inner"></div>
+    <>
+      <div className="hotspot" id={`hotspot-${id}`} onClick={openPopUp}>
+        <div className="hotspot__circle hotspot__circle--outer">
+          <div className="hotspot__circle hotspot__circle--inner"></div>
+        </div>
       </div>
-    </div>
+
+      {show ? <ScenaPunto id={id} type={type} /> : ""}
+    </>
   );
 };
 
