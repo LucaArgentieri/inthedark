@@ -23,6 +23,12 @@ const Hotspot = ({ id, type }) => {
         duration: 0.2,
         onComplete: () => {
           setShow(true);
+
+          gsap.to(".a-bcg-body", {
+            duration: 1,
+            opacity: 1,
+            display: "flex",
+          });
         },
       });
   };

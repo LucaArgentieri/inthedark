@@ -7,7 +7,7 @@ gsap.registerEase(Power4);
 const ScenaPunto = ({ id, type }) => {
   const closePopup = () => {
     gsap.to(".a-bcg-body", {
-      duration: 1,
+      duration: 0.2,
       opacity: 0,
       display: "none",
     });
