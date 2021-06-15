@@ -18,17 +18,8 @@ gsap.registerPlugin(ScrollToPlugin);
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
 
-  const moveToText = () => {
-    gsap.to(window, {
-      scrollTo: ".text_box",
-      duration: 0.5,
-    });
-
-    gsap.to("body", {
-      overflow: "scroll",
-    });
-  };
   useEffect(() => {
+    window.scrollTo(0, 0);
     setTimeout(() => {
       setIsLoading(true);
     }, 5000);
@@ -40,6 +31,17 @@ export default function Home() {
       rotateLogoLoader();
     }
   }, [isLoading]);
+
+  const moveToText = () => {
+    gsap.to(window, {
+      scrollTo: ".text_box",
+      duration: 0.5,
+    });
+
+    gsap.to("body", {
+      overflowY: "scroll",
+    });
+  };
 
   return (
     <>
