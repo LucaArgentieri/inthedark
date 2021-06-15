@@ -23,6 +23,10 @@ export default function Home() {
       scrollTo: ".text_box",
       duration: 0.5,
     });
+
+    gsap.to("body", {
+      overflow: "scroll",
+    });
   };
   useEffect(() => {
     setTimeout(() => {
