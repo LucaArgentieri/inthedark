@@ -11,7 +11,7 @@ export default function Select() {
       </Link>
       <div className="select_container flex">
         <Link
-          to="/experience-stonehenge"
+          to="/experience/stonehenge"
           onMouseEnter={(e) => selectOver(e)}
           onMouseLeave={(e) => removeOver(e)}
           className="stonehenge flex flex_center flex_column"
@@ -24,7 +24,7 @@ export default function Select() {
 
         <Link
           className="pyramid flex flex_center flex_column"
-          to="/experience-cheops-pyramid"
+          to="/experience/cheops-pyramid"
           onMouseEnter={(e) => selectOver(e)}
           onMouseLeave={(e) => removeOver(e)}
         >
