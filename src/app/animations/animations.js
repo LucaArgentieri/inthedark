@@ -35,23 +35,33 @@ export const rotateLogoLoader = () => {
   tl.fromTo(
     ".home_container .loader",
     {
-      opacity: 0,
+      autoAlpha: 0,
       height: 0,
     },
     {
       duration: 3.5,
       height: 100,
-      opacity: 1,
+      autoAlpha: 1,
     }
   );
 
   tl.to(".home_container .loader", {
-    opacity: 0,
+    autoAlpha: 1,
     duration: 1,
   });
 };
 
 export const animateText = () => {
+  gsap.fromTo(
+    ".home_container .loader",
+    {
+      autoAlpha: 0,
+    },
+    {
+      autoAlpha: 1,
+      duration: 1,
+    }
+  );
   tl.from([".home_container .stonehenge"], {
     zIndex: 999,
   });
@@ -59,10 +69,10 @@ export const animateText = () => {
   tl.fromTo(
     [".home_container .stonehenge"],
     {
-      opacity: 0,
+      autoAlpha: 0,
     },
     {
-      opacity: 1,
+      autoAlpha: 1,
       duration: 1,
     }
   );
@@ -70,12 +80,12 @@ export const animateText = () => {
   tl.fromTo(
     [".home_container .title"],
     {
-      opacity: 0,
+      autoAlpha: 0,
       y: 50,
       zIndex: 998,
     },
     {
-      opacity: 1,
+      autoAlpha: 1,
       y: 0,
       duration: 1,
     }
@@ -84,10 +94,10 @@ export const animateText = () => {
   tl.fromTo(
     ".home_container .subtitle",
     {
-      opacity: 0,
+      autoAlpha: 0,
     },
     {
-      opacity: 1,
+      autoAlpha: 1,
       duration: 1,
     }
   );
@@ -99,10 +109,10 @@ export const animateText = () => {
   tl.fromTo(
     ".home_container .enter_btn",
     {
-      opacity: 0,
+      autoAlpha: 0,
     },
     {
-      opacity: 1,
+      autoAlpha: 1,
       duration: 1,
     }
   );
@@ -110,11 +120,11 @@ export const animateText = () => {
   tl.fromTo(
     ".home_container .enter_btn .line",
     {
-      opacity: 0,
+      autoAlpha: 0,
       x: -100,
     },
     {
-      opacity: 1,
+      autoAlpha: 1,
       x: 0,
       duration: 1,
     }
