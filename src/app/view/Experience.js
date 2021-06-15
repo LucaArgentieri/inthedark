@@ -4,13 +4,11 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import Hotspot from "../components/Hotspot";
-import { useParams } from "react-router-dom";
 
 function App({ location }) {
   const webgl = useRef(null);
   const HContainer = useRef(null);
   const stonehengeHotspots = useRef([]);
-  let { id } = useParams();
   // const [hotspots, setHotspots] = useState([]);
   // const history = useHistory();
 
@@ -33,7 +31,7 @@ function App({ location }) {
     /*  Models */
     const gltfLoader = new GLTFLoader();
 
-    gltfLoader.load(`../../../${id}/scene.gltf`, (gltf) => {
+    gltfLoader.load(`../../../${hash}/scene.gltf`, (gltf) => {
       const children = [...gltf.scene.children]; // questo array è completamente scollegato da threejs
       children.forEach((el) => scene.add(el));
     });
