@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Image = styled.img`
   width: ${(props) => props.width};
   height: ${(props) => props.height};
-  padding: ${(props) => props.padding};
+  padding: ${(props) => props.padding} 0;
 `;
 
 Image.defaultProps = {

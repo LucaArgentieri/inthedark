@@ -5,12 +5,13 @@ theme.colors = {
 };
 
 theme.sizes = {
-  container: `${900 / 16}em`,
+  container: `${800 / 16}em`,
 
   space: `${10 / 16}em`,
 
   font1: `${20 / 16}em`,
   fontTitle: `${60 / 16}em`,
+  fontLink: `${30 / 16}em`,
   fontTitleBottom: `${40 / 16}em`,
 
   paddingText: `${10 / 16}em`,
