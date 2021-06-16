@@ -6,6 +6,8 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import Hotspot from "../components/Hotspot";
 import { useParams } from "react-router-dom";
 
+import ScenaPunto from "../components/scenaPunto";
+
 function App({ location }) {
   const webgl = useRef(null);
   const HContainer = useRef(null);

@@ -1,33 +1,38 @@
 import React from "react";
 import { textData } from "../assets/data/text";
 
-import { gsap, Power4 } from "gsap";
-gsap.registerEase(Power4);
+import { gsap } from "gsap";
 
 const ScenaPunto = ({ id, type }) => {
+  const tl = gsap.timeline();
   const closePopup = () => {
+    gsap.to(`#hotspot-${id} .hotspot__circle--outer`, {
+      display: "flex",
+    });
+
     gsap.to(".a-bcg-body", {
       duration: 0.2,
       opacity: 0,
       display: "none",
+      zIndex: 0,
     });
 
     gsap.to(`#hotspot-${id} .hotspot__circle--inner`, {
       width: "15px",
       height: "15px",
       backgroundColor: "#fff",
-      duration: 0.2,
+      duration: 0,
     });
 
     gsap.to(`#hotspot-${id} .hotspot__circle--outer`, {
       width: "35px",
       height: "35px",
-      duration: 0.2,
+      duration: 0,
     });
   };
 
   return (
-    <div className="a-bcg-body flex flex_center flex_column c-black">
+    <div className="a-bcg-body flex flex_center flex_column c-black" id={id}>
       <span onClick={closePopup}>
         <h3 className="a-title nobleman regular">Return to model</h3>
       </span>
