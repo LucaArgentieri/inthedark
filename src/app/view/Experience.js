@@ -4,6 +4,7 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import Hotspot from "../components/Hotspot";
+import { gsap, Power4 } from "gsap";
 import { useParams } from "react-router-dom";
 
 import ScenaPunto from "../components/scenaPunto";
@@ -41,7 +42,7 @@ function App({ location }) {
     });
 
     /* Lights */
-    const ambientLight = new THREE.AmbientLight(0xffffff, 1.3);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.97);
     scene.add(ambientLight);
 
     const directionalLight = new THREE.DirectionalLight(0xffffff, 0.1);
@@ -51,7 +52,7 @@ function App({ location }) {
     directionalLight.position.z = 0.9;
     // const fireLight = new THREE.PointLight("#ff743d", 1.8, 10);
     // fireLight.position.set(0, 1.6, 0.3);
-    gui.add(directionalLight, "intensity").min(0).max(2).step(0.001);
+    gui.add(ambientLight, "intensity").min(0).max(2).step(0.001);
     // gui.add(fireLight.position, "x").min(0).max(6).step(0.001);
     // gui.add(fireLight.position, "y").min(0).max(6).step(0.001);
     // gui.add(fireLight.position, "z").min(0).max(6).step(0.001);
@@ -84,7 +85,19 @@ function App({ location }) {
       100
     );
 
-    camera.position.set(-8, 4.5, 4.5);
+    // camera.position.set(-8, 4.5, 4.5);
+    camera.position.set(10, 8, 10);
+    gsap.to(camera.position, {
+      x: -8,
+      y: 4.5,
+      z: 4.5,
+      duration: 4,
+      delay: 0.2,
+      ease: Power4.easeInOut,
+    });
+    gui.add(camera.position, "x").min(0).max(10).step(0.001).name("X Cam");
+    gui.add(camera.position, "y").min(0).max(10).step(0.001).name("Y Cam");
+    gui.add(camera.position, "z").min(0).max(10).step(0.001).name("Z Cam");
     scene.add(camera);
     const renderer = new THREE.WebGLRenderer({
       canvas,
@@ -95,6 +108,8 @@ function App({ location }) {
     // Controls
     const controls = new OrbitControls(camera, canvas);
     controls.enableDamping = true;
+    controls.maxDistance = 12;
+    controls.maxPolarAngle = Math.PI / 2.2;
 
     renderer.setSize(sizes.width, sizes.height);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -110,17 +125,23 @@ function App({ location }) {
       visible: false,
     });
 
-    // const createHotspot = (x, y, z) => {
-    //   const newHotspot = new THREE.Mesh(circleGeometry, circleMaterial);
-    //   scene.add(newHotspot);
+    const cubeTextureLoader = new THREE.CubeTextureLoader();
 
-    //   newHotspot.position.x = x;
-    //   newHotspot.position.y = y;
-    //   newHotspot.position.z = z;
+    const environmentMap = cubeTextureLoader.load([
+      "../../../environmentMap/px.png",
+      "../../../environmentMap/nx.png",
+      "../../../environmentMap/py.png",
+      "../../../environmentMap/ny.png",
+      "../../../environmentMap/pz.png",
+      "../../../environmentMap/nz.png",
+    ]);
 
-    //   setHotspots((oldArray) => [...oldArray, newHotspot]);
-    //   console.log(hotspots);
-    // };
+    gui.add(environmentMap.offset, "x").min(-10).max(12).step(0.001);
+    gui.add(environmentMap.offset, "y").min(-10).max(12).step(0.001);
+    // gui.add(environmentMap.offset, "z").min(-10).max(12).step(0.001);
+
+    // environmentMap.encoding = THREE.sRGBEncoding;
+    scene.background = environmentMap;
 
     const circleMesh1 = new THREE.Mesh(circleGeometry, circleMaterial);
     circleMesh1.position.set(1.2, 2.5, 3.1);
