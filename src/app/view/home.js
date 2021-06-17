@@ -19,7 +19,6 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
     setTimeout(() => {
       setIsLoading(true);
     }, 5000);

@@ -7,6 +7,9 @@ import ErrorPage from "../app/view/error";
 import Experience from "../app/view/Experience";
 
 function App() {
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  };
   return (
     <>
       <Router>
