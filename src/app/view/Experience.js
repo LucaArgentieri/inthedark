@@ -108,6 +108,7 @@ function App({ location }) {
     // Controls
     const controls = new OrbitControls(camera, canvas);
     controls.enableDamping = true;
+    controls.enablePan = false;
     controls.maxDistance = 12;
     controls.maxPolarAngle = Math.PI / 2.2;
 
