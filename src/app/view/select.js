@@ -24,7 +24,7 @@ export default function Select() {
 
         <Link
           className="pyramid flex flex_center flex_column"
-          to="/experience/cheops-pyramid"
+          to="/experience/gyza-pyramid"
           onMouseEnter={(e) => selectOver(e)}
           onMouseLeave={(e) => removeOver(e)}
         >

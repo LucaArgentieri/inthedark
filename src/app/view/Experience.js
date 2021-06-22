@@ -6,22 +6,19 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import Hotspot from "../components/Hotspot";
 import { gsap, Power4 } from "gsap";
 import { useParams } from "react-router-dom";
-
-import ScenaPunto from "../components/scenaPunto";
+/* POSTPROCESSING  */
+import { HorizontalTiltShiftShader } from "three/examples/jsm/shaders/HorizontalTiltShiftShader";
+import { VerticalTiltShiftShader } from "three/examples/jsm/shaders/VerticalTiltShiftShader";
+import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
+import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
+import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass.js";
+import { CopyShader } from "three/examples/jsm/shaders/CopyShader.js";
 
 function App({ location }) {
   const webgl = useRef(null);
   const HContainer = useRef(null);
   const stonehengeHotspots = useRef([]);
-  let { id } = useParams();
-  // const [hotspots, setHotspots] = useState([]);
-  // const history = useHistory();
-
-  /* useEffect(() => {
-    if (location.hash !== "stonehenge") {
-      history.push("/experience/#stonehenge");
-    }
-  }, [location, history]); */
+  let { id, isPyramid = id === "gyza-pyramid" } = useParams();
 
   const hash = location.hash.substring(1);
 
@@ -36,27 +33,39 @@ function App({ location }) {
     /*  Models */
     const gltfLoader = new GLTFLoader();
 
-    gltfLoader.load(`../../../${id}/scene.gltf`, (gltf) => {
-      const children = [...gltf.scene.children]; // questo array è completamente scollegato da threejs
-      children.forEach((el) => scene.add(el));
-    });
+    gltfLoader.load(
+      `../../../${id}/scene.${isPyramid ? "glb" : "gltf"}`,
+      (gltf) => {
+        const children = [...gltf.scene.children];
+        children.forEach((el) => {
+          if (isPyramid) el.scale.set(3.2, 3.2, 3.2);
+          scene.add(el);
+        });
+      }
+    );
 
-    /* Lights */
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.97);
-    scene.add(ambientLight);
+    const ambientLight = new THREE.AmbientLight(0xffffff);
 
+    const initScene = (ambientLightIntensity) => {
+      /* Lights */
+      ambientLight.intensity = ambientLightIntensity;
+      scene.add(ambientLight);
+    };
+
+    console.log(isPyramid);
+
+    if (isPyramid) {
+      initScene(2.8);
+    } else {
+      initScene(0.97);
+    }
+
+    scene.scale.set(10, 10, 10);
     const directionalLight = new THREE.DirectionalLight(0xffffff, 0.1);
-    // directionalLight.castShadow = true;
     directionalLight.position.x = 0.5;
     directionalLight.position.y = 0.2;
     directionalLight.position.z = 0.9;
-    // const fireLight = new THREE.PointLight("#ff743d", 1.8, 10);
-    // fireLight.position.set(0, 1.6, 0.3);
     gui.add(ambientLight, "intensity").min(0).max(2).step(0.001);
-    // gui.add(fireLight.position, "x").min(0).max(6).step(0.001);
-    // gui.add(fireLight.position, "y").min(0).max(6).step(0.001);
-    // gui.add(fireLight.position, "z").min(0).max(6).step(0.001);
-    // const pointLightHelper = new THREE.PointLightHelper(fireLight);
     scene.add(directionalLight);
 
     // sizes
@@ -139,9 +148,7 @@ function App({ location }) {
 
     gui.add(environmentMap.offset, "x").min(-10).max(12).step(0.001);
     gui.add(environmentMap.offset, "y").min(-10).max(12).step(0.001);
-    // gui.add(environmentMap.offset, "z").min(-10).max(12).step(0.001);
 
-    // environmentMap.encoding = THREE.sRGBEncoding;
     scene.background = environmentMap;
 
     const circleMesh1 = new THREE.Mesh(circleGeometry, circleMaterial);
@@ -153,18 +160,43 @@ function App({ location }) {
 
     stonehengeHotspots.current = [circleMesh1, circleMesh2, circleMesh3];
 
-    // createHotspot(1.2, 2.5, 3.1);
-    // createHotspot(0.77, 2.5, 2.8);
-    // createHotspot(2.2, 2.5, 1.1);
-
     gui.add(circleMesh3.position, "x").min(-10).max(12).step(0.001);
     gui.add(circleMesh3.position, "y").min(-10).max(12).step(0.001);
     gui.add(circleMesh3.position, "z").min(-10).max(12).step(0.001);
 
+    // scene.scale(1.4);
     /*
-     * RAYCASTER
+     * POSTPROCESSING
      */
-    // const raycaster = new THREE.Raycaster();
+    let composer;
+
+    const initPostProcessing = () => {
+      var renderPass = new RenderPass(scene, camera);
+      // TODO: Look at using @mattdesl's optimised FXAA shader    // https://github.com/mattdesl/three-shader-fxaa    var fxaaPass = new ShaderPass(FXAAShader);
+      var hblurPass = new ShaderPass(HorizontalTiltShiftShader);
+      var vblurPass = new ShaderPass(VerticalTiltShiftShader);
+      var bluriness = 10;
+      hblurPass.uniforms.r.value = vblurPass.uniforms.r.value = 0.6;
+      var copyPass = new ShaderPass(CopyShader);
+      copyPass.renderToScreen = true;
+      composer = new EffectComposer(renderer);
+      composer.addPass(renderPass);
+      composer.addPass(hblurPass);
+      composer.addPass(vblurPass);
+      composer.addPass(copyPass);
+      var updatePostProcessingSize = function () {
+        var width = canvas.clientWidth;
+        var height = canvas.clientHeight;
+        hblurPass.uniforms.h.value =
+          bluriness / (width * Math.min(window.devicePixelRatio, 2));
+        vblurPass.uniforms.v.value =
+          bluriness / (height * Math.min(window.devicePixelRatio, 2));
+      };
+      updatePostProcessingSize();
+      window.addEventListener("resize", updatePostProcessingSize, false);
+    };
+
+    initPostProcessing();
 
     // Cursor
     const mouse = new THREE.Vector2();
@@ -178,10 +210,6 @@ function App({ location }) {
 
     /* RAF function */
     const tick = () => {
-      // const elapsedTime = clock.getElapsedTime();
-      // const deltaTime = elapsedTime - previousTime;
-      // previousTime = elapsedTime;
-
       stonehengeHotspots.current.forEach((h, i) => {
         h.getWorldPosition(tempV);
         tempV.project(camera);
@@ -195,7 +223,7 @@ function App({ location }) {
 
       controls.update();
       // Render
-      renderer.render(scene, camera);
+      composer.render(scene, camera);
       window.requestAnimationFrame(tick);
     };
 
