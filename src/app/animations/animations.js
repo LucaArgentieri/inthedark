@@ -1,7 +1,131 @@
 import { gsap, Power1 } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerEase(Power1);
+gsap.registerPlugin(ScrollTrigger);
 
 const tl = gsap.timeline();
+
+export const animateHomeText = () => {
+  gsap.fromTo(
+    ".title",
+    {
+      opacity: 0,
+    },
+    {
+      scrollTrigger: ".title",
+      duration: 1,
+      opacity: 1,
+    }
+  );
+
+  gsap.fromTo(
+    ".text1",
+    {
+      opacity: 0,
+    },
+    {
+      scrollTrigger: ".text1",
+      duration: 1,
+      opacity: 1,
+    }
+  );
+
+  gsap.fromTo(
+    ".text2",
+    {
+      opacity: 0,
+    },
+    {
+      scrollTrigger: ".text2",
+      duration: 1,
+      opacity: 1,
+    }
+  );
+
+  gsap.fromTo(
+    ".text3",
+    {
+      opacity: 0,
+    },
+    {
+      scrollTrigger: ".text3",
+      duration: 1,
+      opacity: 1,
+    }
+  );
+
+  gsap.fromTo(
+    ".text4",
+    {
+      opacity: 0,
+    },
+    {
+      scrollTrigger: ".text4",
+      duration: 1,
+      opacity: 1,
+    }
+  );
+
+  gsap.fromTo(
+    ".text5",
+    {
+      opacity: 0,
+    },
+    {
+      scrollTrigger: ".text5",
+      duration: 1,
+      opacity: 1,
+    }
+  );
+
+  gsap.fromTo(
+    ".text6",
+    {
+      opacity: 0,
+    },
+    {
+      scrollTrigger: ".text6",
+      duration: 1,
+      opacity: 1,
+    }
+  );
+
+  gsap.fromTo(
+    ".text7",
+    {
+      opacity: 0,
+    },
+    {
+      scrollTrigger: ".text7",
+      duration: 1,
+      opacity: 1,
+    }
+  );
+
+  gsap.fromTo(
+    ".img1",
+    {
+      opacity: 0,
+    },
+    {
+      scrollTrigger: ".img1",
+      duration: 1,
+      opacity: 1,
+    }
+  );
+
+  gsap.fromTo(
+    ".img2",
+    {
+      opacity: 0,
+    },
+    {
+      scrollTrigger: ".img2",
+      duration: 1,
+      opacity: 1,
+    }
+  );
+};
 
 export const selectOver = (el) => {
   gsap.to(el.target, {

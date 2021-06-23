@@ -13,7 +13,6 @@ const Text = styled.span`
   text-decoration: ${(props) => props.decoration};
   font-family: ${(props) => props.font};
   word-spacing: 2px;
-  opacity: 0;
   `;
 
 Text.defaultProps = {
@@ -23,7 +22,6 @@ Text.defaultProps = {
   padding: theme.sizes.paddingText,
   transform: "none",
   weight: "normal",
-  opacity: 0,
 };
 
 export default Text;
