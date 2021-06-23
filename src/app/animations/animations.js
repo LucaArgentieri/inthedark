@@ -132,12 +132,20 @@ export const selectOver = (el) => {
     duration: 0.3,
     width: "90%",
   });
+
+  gsap.to(".cursor", {
+    css: { className: "cursor expand" },
+  });
 };
 
 export const removeOver = (el) => {
   gsap.to(el.target, {
     duration: 0.3,
     width: "50%",
+  });
+
+  gsap.to(".expand", {
+    css: { className: "cursor" },
   });
 };
 
@@ -265,6 +273,10 @@ export const hoverBtn = () => {
       x: 100,
     }
   );
+
+  gsap.to(".cursor", {
+    css: { className: "cursor expand" },
+  });
 };
 
 export const removeHoverBtn = () => {
@@ -277,4 +289,14 @@ export const removeHoverBtn = () => {
       x: 1,
     }
   );
+
+  gsap.to(".expand", {
+    css: { className: "cursor" },
+  });
+};
+
+export const resetCursor = () => {
+  gsap.to(".expand", {
+    css: { className: "cursor" },
+  });
 };

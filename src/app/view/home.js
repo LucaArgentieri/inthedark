@@ -40,6 +40,10 @@ export default function Home() {
     gsap.to("body", {
       overflowY: "scroll",
     });
+
+    gsap.to(".expand", {
+      css: { className: "cursor" },
+    });
   };
 
   return (

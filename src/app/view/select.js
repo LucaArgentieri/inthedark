@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/svg/logo.svg";
-import { selectOver, removeOver } from "../animations/animations";
+import { selectOver, removeOver, resetCursor } from "../animations/animations";
 
 export default function Select() {
   return (
@@ -14,6 +14,7 @@ export default function Select() {
           to="/experience/stonehenge"
           onMouseEnter={(e) => selectOver(e)}
           onMouseLeave={(e) => removeOver(e)}
+          onClick={resetCursor}
           className="stonehenge flex flex_center flex_column"
         >
           <p className="nobleman c-white regular fs-64 upcase">stonehenge</p>
@@ -27,6 +28,7 @@ export default function Select() {
           to="/experience/gyza-pyramid"
           onMouseEnter={(e) => selectOver(e)}
           onMouseLeave={(e) => removeOver(e)}
+          onClick={resetCursor}
         >
           <p className="nobleman regular fs-48 upcase c-white">
             piramide di cheope

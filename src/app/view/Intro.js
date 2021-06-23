@@ -7,9 +7,15 @@ import Image from "../components/Image";
 import firstIntro from "../assets/images/firstIntro.png";
 import secondIntro from "../assets/images/secondIntro.png";
 import { Link } from "react-router-dom";
+import {
+  hoverBtn,
+  removeHoverBtn,
+  resetCursor,
+} from "../animations/animations";
 
 export default function Intro() {
   animateHomeText();
+  resetCursor();
   return (
     <Box className="text_box">
       <Container>
@@ -70,7 +76,14 @@ export default function Intro() {
           size={`${theme.sizes.fontTitleBottom}`}
           font={`${theme.fonts.title}`}
         >
-          <Link to="/experience">VEDI I LUOGHI ARCHEOASTRONOMICI</Link>
+          <Link
+            onMouseEnter={hoverBtn}
+            onMouseLeave={removeHoverBtn}
+            onClick={resetCursor}
+            to="/experience"
+          >
+            VEDI I LUOGHI ARCHEOASTRONOMICI
+          </Link>
         </Text>
       </Container>
     </Box>
