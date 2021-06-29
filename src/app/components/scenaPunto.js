@@ -35,9 +35,6 @@ const ScenaPunto = ({ id, type }) => {
   return (
     <div className="a-bcg-body flex flex_center flex_column c-black" id={id}>
       <div className="a-bcg-body-container">
-        <span onClick={closePopup}>
-          <h3 className="a-title nobleman regular">Return to model</h3>
-        </span>
         <span onMouseEnter={() => hover()} onClick={closePopup}>
           <h3 className="a-title nobleman regular">Return to model</h3>
         </span>
