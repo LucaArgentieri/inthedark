@@ -7,6 +7,8 @@ import Image from "../components/Image";
 import firstIntro from "../assets/images/firstIntro.png";
 import secondIntro from "../assets/images/secondIntro.png";
 import { Link } from "react-router-dom";
+import { gsap } from "gsap";
+import { click, hover, stopSound } from "../animations/sounds";
 import {
   hoverBtn,
   removeHoverBtn,
@@ -16,14 +18,12 @@ import {
 export default function Intro() {
   animateHomeText();
   resetCursor();
-import { gsap } from "gsap";
-import { click, hover, stopSound } from "../animations/sounds";
 
-export default function Intro() {
   const clickSelect = () => {
     stopSound();
     click();
   };
+
   const tl = gsap.timeline();
 
   window.addEventListener("scroll", (evt) => {
