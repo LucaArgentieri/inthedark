@@ -1,5 +1,6 @@
 import { gsap, Power1 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { hover } from "../animations/sounds";
 gsap.registerEase(Power1);
 gsap.registerPlugin(ScrollTrigger);
 
@@ -128,6 +129,7 @@ export const animateHomeText = () => {
 };
 
 export const selectOver = (el) => {
+  hover();
   gsap.to(el.target, {
     duration: 0.3,
     width: "90%",
@@ -264,6 +266,7 @@ export const animateText = () => {
 };
 
 export const hoverBtn = () => {
+  hover();
   gsap.fromTo(
     ".home_container .enter_btn .line",
     {

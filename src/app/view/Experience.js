@@ -13,6 +13,28 @@ import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
 import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass.js";
 import { CopyShader } from "three/examples/jsm/shaders/CopyShader.js";
+import {
+  hover,
+  click,
+  stonSound,
+  stopGizaSound,
+  stopSound,
+} from "../animations/sounds";
+import { Link } from "react-router-dom";
+
+import styled from "styled-components";
+
+const Title = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  padding-top: 2em;
+`;
+const stopAudio = () => {
+  stopSound();
+  stopGizaSound();
+  click();
+};
 
 function App({ location }) {
   const webgl = useRef(null);
@@ -237,6 +259,15 @@ function App({ location }) {
         <Hotspot id="0" type="stonehenge" />
         <Hotspot id="1" type="stonehenge" />
         <Hotspot id="2" type="stonehenge" />
+        <Title>
+          <Link
+            to="/experience"
+            onMouseEnter={() => hover()}
+            onClick={() => stopAudio()}
+          >
+            <h3 className="a-title nobleman regular">Return to model</h3>
+          </Link>
+        </Title>
       </div>
     </>
   );

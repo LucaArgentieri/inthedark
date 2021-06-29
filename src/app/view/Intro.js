@@ -16,6 +16,73 @@ import {
 export default function Intro() {
   animateHomeText();
   resetCursor();
+import { gsap } from "gsap";
+import { click, hover, stopSound } from "../animations/sounds";
+
+export default function Intro() {
+  const clickSelect = () => {
+    stopSound();
+    click();
+  };
+  const tl = gsap.timeline();
+
+  window.addEventListener("scroll", (evt) => {
+    tl.to(".text_box .title", {
+      scrollTrigger: ".text_box .title",
+      opacity: 1,
+      duration: 0.5,
+    });
+    tl.to(".text_box .text1", {
+      scrollTrigger: ".text_box .text1",
+      opacity: 1,
+      duration: 0.5,
+    });
+    tl.to(".text_box .img1", {
+      scrollTrigger: ".text_box .img1",
+      opacity: 1,
+      duration: 0.5,
+    });
+    tl.to(".text_box .text2", {
+      scrollTrigger: ".text_box .text2",
+      opacity: 1,
+      duration: 0.5,
+    });
+    tl.to(".text_box .text3", {
+      scrollTrigger: ".text_box .text3",
+      opacity: 1,
+      duration: 0.5,
+    });
+    tl.to(".text_box .text4", {
+      scrollTrigger: ".text_box .text4",
+      opacity: 1,
+      duration: 0.5,
+    });
+    tl.to(".text_box .img2", {
+      scrollTrigger: ".text_box .img2",
+      opacity: 1,
+      duration: 0.5,
+    });
+    tl.to(".text_box .text5", {
+      scrollTrigger: ".text_box .text5",
+      opacity: 1,
+      duration: 0.5,
+    });
+    tl.to(".text_box .text6", {
+      scrollTrigger: ".text_box .text6",
+      opacity: 1,
+      duration: 0.5,
+    });
+    tl.to(".text_box .text7", {
+      scrollTrigger: ".text_box .text7",
+      opacity: 1,
+      duration: 0.5,
+    });
+    tl.to(".text_box .text8", {
+      scrollTrigger: ".text_box .text8",
+      opacity: 1,
+      duration: 0.5,
+    });
+  });
   return (
     <Box className="text_box">
       <Container>
@@ -77,10 +144,9 @@ export default function Intro() {
           font={`${theme.fonts.title}`}
         >
           <Link
-            onMouseEnter={hoverBtn}
-            onMouseLeave={removeHoverBtn}
-            onClick={resetCursor}
             to="/experience"
+            onMouseEnter={() => hover()}
+            onClick={() => clickSelect()}
           >
             VEDI I LUOGHI ARCHEOASTRONOMICI
           </Link>

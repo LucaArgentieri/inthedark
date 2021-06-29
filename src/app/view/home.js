@@ -14,6 +14,7 @@ import {
 import Intro from "../view/Intro";
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { click, stonSound } from "../animations/sounds";
 gsap.registerPlugin(ScrollToPlugin);
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
@@ -24,6 +25,7 @@ export default function Home() {
     }, 5000);
 
     if (isLoading) {
+      stonSound();
       animateText();
       rotateLogo();
     } else {
@@ -32,6 +34,7 @@ export default function Home() {
   }, [isLoading]);
 
   const moveToText = () => {
+    click();
     gsap.to(window, {
       scrollTo: ".text_box",
       duration: 0.5,

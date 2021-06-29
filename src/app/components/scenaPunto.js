@@ -1,11 +1,12 @@
 import React from "react";
 import { textData } from "../assets/data/text";
-
+import { click, hover } from "../animations/sounds";
 import { gsap } from "gsap";
 
 const ScenaPunto = ({ id, type }) => {
   const tl = gsap.timeline();
   const closePopup = () => {
+    click();
     gsap.to(`#hotspot-${id} .hotspot__circle--outer`, {
       display: "flex",
     });
@@ -35,6 +36,9 @@ const ScenaPunto = ({ id, type }) => {
     <div className="a-bcg-body flex flex_center flex_column c-black" id={id}>
       <div className="a-bcg-body-container">
         <span onClick={closePopup}>
+          <h3 className="a-title nobleman regular">Return to model</h3>
+        </span>
+        <span onMouseEnter={() => hover()} onClick={closePopup}>
           <h3 className="a-title nobleman regular">Return to model</h3>
         </span>
 

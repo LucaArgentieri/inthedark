@@ -1,9 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/svg/logo.svg";
-import { selectOver, removeOver, resetCursor } from "../animations/animations";
+import { selectOver, removeOver } from "../animations/animations";
+import { click, stonSound, gizaSound } from "../animations/sounds";
 
 export default function Select() {
+  const clickStonehange = () => {
+    stonSound();
+    click();
+  };
+  const clickGiza = () => {
+    gizaSound();
+    click();
+  };
   return (
     <div className="select">
       <Link to="/" className="logo">
@@ -14,7 +23,7 @@ export default function Select() {
           to="/experience/stonehenge"
           onMouseEnter={(e) => selectOver(e)}
           onMouseLeave={(e) => removeOver(e)}
-          onClick={resetCursor}
+          onClick={() => clickStonehange()}
           className="stonehenge flex flex_center flex_column"
         >
           <p className="nobleman c-white regular fs-64 upcase">stonehenge</p>
@@ -28,7 +37,7 @@ export default function Select() {
           to="/experience/gyza-pyramid"
           onMouseEnter={(e) => selectOver(e)}
           onMouseLeave={(e) => removeOver(e)}
-          onClick={resetCursor}
+          onClick={() => clickGiza()}
         >
           <p className="nobleman regular fs-48 upcase c-white">
             piramide di cheope
