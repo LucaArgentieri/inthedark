@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ScenaPunto from "../components/scenaPunto";
 import { gsap, Power4 } from "gsap";
+import { click, hover } from "../animations/sounds";
 gsap.registerEase(Power4);
 
 const Hotspot = ({ id, type }) => {
@@ -12,6 +13,7 @@ const Hotspot = ({ id, type }) => {
   }, []);
 
   const openPopUp = () => {
+    click();
     const popUpTl = gsap.timeline({ ease: Power4.easeInOut });
     gsap.to(`#hotspot-${id} .hotspot__circle--outer`, {
       width: sz * 2.5,
@@ -44,7 +46,12 @@ const Hotspot = ({ id, type }) => {
   };
   return (
     <>
-      <div className="hotspot" id={`hotspot-${id}`} onClick={openPopUp}>
+      <div
+        className="hotspot"
+        id={`hotspot-${id}`}
+        onClick={openPopUp}
+        onMouseEnter={() => hover()}
+      >
         <div className="hotspot__circle hotspot__circle--outer">
           <div className="hotspot__circle hotspot__circle--inner"></div>
         </div>

@@ -1,9 +1,11 @@
 import { gsap, Power1 } from "gsap";
+import { hover } from "../animations/sounds";
 gsap.registerEase(Power1);
 
 const tl = gsap.timeline();
 
 export const selectOver = (el) => {
+  hover();
   gsap.to(el.target, {
     duration: 0.3,
     width: "90%",
@@ -132,6 +134,7 @@ export const animateText = () => {
 };
 
 export const hoverBtn = () => {
+  hover();
   gsap.fromTo(
     ".home_container .enter_btn .line",
     {

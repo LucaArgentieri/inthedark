@@ -6,8 +6,28 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import Hotspot from "../components/Hotspot";
 import { gsap, Power4 } from "gsap";
 import { useParams } from "react-router-dom";
+import {
+  hover,
+  click,
+  stonSound,
+  stopGizaSound,
+  stopSound,
+} from "../animations/sounds";
+import { Link } from "react-router-dom";
 
-import ScenaPunto from "../components/scenaPunto";
+import styled from "styled-components";
+
+const Title = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  padding-top: 2em;
+`;
+const stopAudio = () => {
+  stopSound();
+  stopGizaSound();
+  click();
+};
 
 function App({ location }) {
   const webgl = useRef(null);
@@ -209,6 +229,15 @@ function App({ location }) {
         <Hotspot id="0" type="stonehenge" />
         <Hotspot id="1" type="stonehenge" />
         <Hotspot id="2" type="stonehenge" />
+        <Title>
+          <Link
+            to="/experience"
+            onMouseEnter={() => hover()}
+            onClick={() => stopAudio()}
+          >
+            <h3 className="a-title nobleman regular">Return to model</h3>
+          </Link>
+        </Title>
       </div>
     </>
   );

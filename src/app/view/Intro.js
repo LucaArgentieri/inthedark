@@ -7,8 +7,13 @@ import firstIntro from "../assets/images/firstIntro.png";
 import secondIntro from "../assets/images/secondIntro.png";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
+import { click, hover, stopSound } from "../animations/sounds";
 
 export default function Intro() {
+  const clickSelect = () => {
+    stopSound();
+    click();
+  };
   const tl = gsap.timeline();
 
   window.addEventListener("scroll", (evt) => {
@@ -128,7 +133,13 @@ export default function Intro() {
           size={`${theme.sizes.fontTitleBottom}`}
           font={`${theme.fonts.title}`}
         >
-          <Link to="/experience">VEDI I LUOGHI ARCHEOASTRONOMICI</Link>
+          <Link
+            to="/experience"
+            onMouseEnter={() => hover()}
+            onClick={() => clickSelect()}
+          >
+            VEDI I LUOGHI ARCHEOASTRONOMICI
+          </Link>
         </Text>
       </Container>
     </Box>
