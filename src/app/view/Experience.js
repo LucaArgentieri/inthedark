@@ -265,7 +265,7 @@ function App({ location }) {
             onMouseEnter={() => hover()}
             onClick={() => stopAudio()}
           >
-            <h3 className="a-title nobleman regular">Return to model</h3>
+            <h3 className="a-title nobleman regular">Return to select</h3>
           </Link>
         </Title>
       </div>

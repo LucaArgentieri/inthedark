@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { animateHomeText } from "../animations/animations";
 import Box from "../components/Box";
 import Container from "../components/Container";
@@ -26,7 +27,7 @@ export default function Intro() {
 
   const tl = gsap.timeline();
 
-  window.addEventListener("scroll", (evt) => {
+  useEffect(() => {
     tl.to(".text_box .title", {
       scrollTrigger: ".text_box .title",
       opacity: 1,
@@ -82,7 +83,9 @@ export default function Intro() {
       opacity: 1,
       duration: 0.5,
     });
-  });
+  }, []);
+
+  window.addEventListener("scroll", (evt) => {});
   return (
     <Box className="text_box">
       <Container>
