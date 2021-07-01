@@ -258,7 +258,7 @@ function App({ location }) {
       <div id="hotspots" ref={HContainer}>
         <Hotspot id="0" type="stonehenge" />
         <Hotspot id="1" type="stonehenge" />
-        <Hotspot id="2" type="stonehenge" />
+        <Hotspot id="2" type="pyramid" />
         <Title>
           <Link
             to="/experience"

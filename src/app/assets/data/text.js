@@ -2,7 +2,10 @@ import image0 from "../images/image0.png";
 import image1 from "../images/image1.png";
 import image2 from "../images/image2.png";
 import image3 from "../images/image3.png";
-
+// immagini di giza import
+import giza1 from "../images/image0.png";
+import giza2 from "../images/image0.png";
+import giza3 from "../images/image0.png";
 export const textData = {
   stonehenge: [
     {
@@ -44,8 +47,35 @@ export const textData = {
       desc1:
         "An interesting hypothesis is that of Newman of 1966 about the alignment of the lunar motions. The Station stones seem to describe a rectangle in which the two short sides are in the same direction as the axis of the monument and point towards the sunrise and sunset of the solstices. The two long sides instead point instead where the Moon rises and sets at the lunastice (the moment in which the satellite reaches the maximum inclination value with respect to the celestial equator) and in the case in which the lunar dawn occurs more southeast as possible.",
       desc2:
-        "It isn’t possible to exclude that the reason of the location of Stonehenge was chosen precisely because of that, but an action of this type would have required many repeated measures over the years and an almost scientific methodological approach that could be extemporaneous for the men of the time and, if there had been, then it is not clear why a region still further south, towards the English Channel, was not chosen.",
+        "It isn't possible to exclude that the reason of the location of Stonehenge was chosen precisely because of that, but an action of this type would have required many repeated measures over the years and an almost scientific methodological approach that could be extemporaneous for the men of the time and, if there had been, then it is not clear why a region still further south, towards the English Channel, was not chosen.",
     },
   ],
-  pyramid: [],
+  pyramid: [
+    {
+      title: "Pyramid of cheops",
+      upperImage: giza1,
+      desc1:
+        "The Pyramid of Cheops, also known as the Great Pyramid of Giza, is the oldest and largest of the three main pyramids of the Giza necropolis. It's the oldest of the seven wonders of the world as well as the only one that has arrived today not in a state of ruin.",
+      desc2:
+        "It consists of at least 2 million and 300 thousand blocks, each weighing about 2.5 tons on average and, according to Egyptologists, built over a period of about 23 years.",
+      desc3:
+        "According to the established opinion and believed to be proven by the whole world, each block of 2.5 has been placed in any position and height, every 3 minutes, day and night, for over 20 years.",
+    },
+    {
+      title: "How it all started",
+      upperImage: giza2,
+      desc1:
+        "The attention to the sky by the Egyptians is not only found thanks to the astronomical orientation, in fact the pyramids were built in relation to the Orion belt, but also from the numerous references that we find within ancient papyri and in representations within the structures themselves.",
+      desc2:
+        "The ventilation channels of the pyramid of Cheops at Giza point towards Orion and Sirius as they were positioned in 10,500 BC.",
+    },
+    {
+      title: "Orion Correlation Theory",
+      upperImage: giza3,
+      desc1:
+        "This thesis is suggested by Bauval and Gilbert, later known as the Orion Correlation Theory on the existence of a perfect coincidence between the arrangement of the Orion Belt three stars and that of the three pyramids of Giza. So it could be said that the pyramids would represent the monumental reproduction of the Constellation on the ground.",
+      desc2:
+        "According to more accurate studies it emerged that in any case the ducts, classified as aeration channels of the pyramid of Cheops, really fulfilled the function of stellar goals but with dating between 2700 BC. and 2400 BC for the canal that pointed to a star of the Belt and 2450 BC. for the canal that pointed to Sirio.",
+    },
+  ],
 };
