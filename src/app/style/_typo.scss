@@ -63,6 +63,7 @@ $fontsizes: (
   72: 72px,
   96: 96px,
   123: 123px,
+  160: 160px,
 );
 
 @each $key in map-keys($fontsizes) {

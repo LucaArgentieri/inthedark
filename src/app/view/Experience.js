@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import Logo from "../assets/svg/logo.svg";
 import * as dat from "dat.gui";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
@@ -73,8 +74,6 @@ function App({ location }) {
       ambientLight.intensity = ambientLightIntensity;
       scene.add(ambientLight);
     };
-
-    console.log(isPyramid);
 
     if (isPyramid) {
       initScene(2.8);
@@ -258,14 +257,16 @@ function App({ location }) {
       <div id="hotspots" ref={HContainer}>
         <Hotspot id="0" type="stonehenge" />
         <Hotspot id="1" type="stonehenge" />
-        <Hotspot id="2" type="pyramid" />
+        <Hotspot id="2" type="stonehenge" />
+        <Hotspot id="3" type="stonehenge" />
+
         <Title>
           <Link
             to="/experience"
             onMouseEnter={() => hover()}
             onClick={() => stopAudio()}
           >
-            <h3 className="a-title nobleman regular">Return to select</h3>
+            <img className="experience-logo" src={Logo} alt="" />
           </Link>
         </Title>
       </div>

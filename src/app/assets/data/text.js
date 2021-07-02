@@ -9,7 +9,9 @@ import giza3 from "../images/image0.png";
 export const textData = {
   stonehenge: [
     {
-      title: "What was Stonehenge for?",
+      pretitle: "What was ",
+      title: "Stonehenge",
+      posttitle: " for?",
       upperImage: image0,
       desc1:
         "The original axis of the site is oriented towards the dawn of the summer solstice and the first lights of dawn hit the Altar stone in the stone circle. In the same way, looking from the inside out, the sunset of the winter solstice is framed and the last sunlights hit the Altar stone.",
@@ -17,7 +19,9 @@ export const textData = {
         "The solstices were often associated with the ideas of renewal and rebirth, and it seems reasonable to assume that the religious ceremonies took place within the stone circle.",
     },
     {
-      title: "What is Stonehenge?",
+      pretitle: "What is ",
+      title: "Stonehenge?",
+      posttitle: "",
       image: image1,
       desc1:
         "Stonehenge is the reference place for archeoastronomy, like many aspects suggest that its construction has taken into account the motions of the stars in the sky.",
@@ -25,7 +29,9 @@ export const textData = {
         "An ancient prehistoric site in Wiltshire, England, near Amesbury, Stonehenge consists  of an outer ring of vertical standing stones; it was built around the fifth millennium BC, during the so called megalithic architecture, one of the first examples of architectural styles spread in all Europe.",
     },
     {
-      title: "Archeoastronomy of Stonehenge",
+      pretitle: "Archeoastronomy of ",
+      title: "Stonehenge",
+      posttitle: "",
       upperImage: image2,
       image2: image3,
       desc1:
@@ -33,7 +39,9 @@ export const textData = {
       desc2: "",
     },
     {
+      pretitle: "",
       title: "Gerald Hawkins",
+      posttitle: "",
       image: image2,
       image2: image3,
       desc1:
@@ -41,7 +49,9 @@ export const textData = {
       desc2: "",
     },
     {
-      title: "Newman",
+      pretitle: "1966 - newman",
+      title: "Stonehenge's",
+      posttitle: "hypothesis",
       image: image2,
       image2: image3,
       desc1:
@@ -52,7 +62,9 @@ export const textData = {
   ],
   pyramid: [
     {
-      title: "Pyramid of cheops",
+      pretitle: "",
+      title: "Pyramid",
+      posttitle: " of cheops",
       upperImage: giza1,
       desc1:
         "The Pyramid of Cheops, also known as the Great Pyramid of Giza, is the oldest and largest of the three main pyramids of the Giza necropolis. It's the oldest of the seven wonders of the world as well as the only one that has arrived today not in a state of ruin.",
@@ -62,7 +74,9 @@ export const textData = {
         "According to the established opinion and believed to be proven by the whole world, each block of 2.5 has been placed in any position and height, every 3 minutes, day and night, for over 20 years.",
     },
     {
-      title: "How it all started",
+      pretitle: "How it all ",
+      title: "started",
+      posttitle: "",
       upperImage: giza2,
       desc1:
         "The attention to the sky by the Egyptians is not only found thanks to the astronomical orientation, in fact the pyramids were built in relation to the Orion belt, but also from the numerous references that we find within ancient papyri and in representations within the structures themselves.",
@@ -70,7 +84,9 @@ export const textData = {
         "The ventilation channels of the pyramid of Cheops at Giza point towards Orion and Sirius as they were positioned in 10,500 BC.",
     },
     {
-      title: "Orion Correlation Theory",
+      pretitle: "",
+      title: "Orion",
+      posttitle: " Correlation Theory",
       upperImage: giza3,
       desc1:
         "This thesis is suggested by Bauval and Gilbert, later known as the Orion Correlation Theory on the existence of a perfect coincidence between the arrangement of the Orion Belt three stars and that of the three pyramids of Giza. So it could be said that the pyramids would represent the monumental reproduction of the Constellation on the ground.",

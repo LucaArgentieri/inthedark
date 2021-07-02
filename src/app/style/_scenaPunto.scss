@@ -1,5 +1,6 @@
 //Scss della scenaPunto
 .a-bcg-body {
+  pointer-events: all;
   position: absolute;
   left: 0;
   top: 0;
@@ -10,8 +11,7 @@
 
   .a-bcg-body-container {
     overflow-y: scroll;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 50px;
 
     h3 {
       text-align: center;
@@ -22,38 +22,81 @@
     }
   }
 
-  a {
-    text-align: center;
-    text-decoration: underline;
+  .a-title {
+    transform: rotate(90deg);
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    border-bottom: 1px solid black;
   }
+}
 
-  .container {
-    .row {
-      h3.title {
-        text-align: center;
-        padding: 12px 0px 12px 0px;
-      }
+//Stone1
+.stone1 {
+  padding: 50px;
+
+  .text_container {
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr;
+
+    p {
+      padding-right: 20px;
+      line-height: 1.6;
+    }
+
+    img {
+      height: 70%;
     }
   }
+}
 
-  .img-position {
-    display: block;
-    margin: 0px auto;
-    text-align: center;
+.stone2 {
+  padding: 50px;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
   }
 
-  .txt-position {
-    line-height: 27px;
-    display: block;
-    margin: 0px auto;
-    text-align: center;
-    max-width: 620px;
-    text-align: justify;
-    padding-top: 1.3rem;
+  .title {
+    padding-bottom: 25px;
   }
-  p.n-position {
-    margin: 0px 2em;
-    text-align: right;
+  .text_container {
+    p {
+      padding-right: 20px;
+      line-height: 1.6;
+    }
+
+    div {
+      padding-bottom: 100px;
+    }
+
+    img {
+      height: 50%;
+    }
+  }
+}
+
+.stone3 {
+  padding: 50px;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  .full {
+    height: 50vh;
+    img {
+      height: 100%;
+    }
+  }
+  .text_container {
+    padding-top: 50px;
+    div {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
   }
 }
 
@@ -61,5 +104,22 @@
   .a-bcg-body {
     padding-left: 25px;
     padding-right: 25px;
+  }
+}
+
+#hotspots {
+  height: 100vh;
+  pointer-events: none;
+
+  .hotspot {
+    pointer-events: all;
+  }
+
+  .experience-logo {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    height: 100px;
+    pointer-events: all;
   }
 }

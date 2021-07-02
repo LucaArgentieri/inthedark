@@ -1,10 +1,16 @@
 import React from "react";
-import { textData } from "../assets/data/text";
 import { click, hover } from "../animations/sounds";
 import { gsap } from "gsap";
 
+import Stone1 from "../components/layout/stone1";
+import Stone2 from "../components/layout/stone2";
+import Stone3 from "../components/layout/stone3";
+import Stone4 from "../components/layout/stone4";
+import Pyramid1 from "../components/layout/pyramid1";
+import Pyramid2 from "../components/layout/pyramid2";
+import Pyramid3 from "../components/layout/pyramid3";
+
 const ScenaPunto = ({ id, type }) => {
-  const tl = gsap.timeline();
   const closePopup = () => {
     click();
     gsap.to(`#hotspot-${id} .hotspot__circle--outer`, {
@@ -38,63 +44,19 @@ const ScenaPunto = ({ id, type }) => {
         <span onMouseEnter={() => hover()} onClick={closePopup}>
           <h3 className="a-title nobleman regular">Return to model</h3>
         </span>
-
-        <div className="container">
-          <div className="row">
-            <h3 className="title nobleman bold fs-36 upcase">
-              {type === "stonehenge"
-                ? textData.stonehenge[id].title
-                : textData.pyramid[id].title}
-            </h3>
-          </div>
-        </div>
-
-        <img
-          src={
-            type === "stonehenge"
-              ? textData.stonehenge[id].upperImage
-              : textData.pyramid[id].upperImage
-          }
-          className="img-position"
-        />
-
-        <p className="txt-position athiti medium">
-          {type === "stonehenge"
-            ? textData.stonehenge[id].desc1
-            : textData.pyramid[id].desc1}
-        </p>
-
-        <img
-          src={
-            type === "stonehenge"
-              ? textData.stonehenge[id].image
-              : textData.pyramid[id].image
-          }
-          className="img-position"
-        />
-
-        <img
-          src={
-            type === "stonehenge"
-              ? textData.stonehenge[id].image2
-              : textData.pyramid[id].image2
-          }
-          className="img-position"
-        />
-
-        <p className="txt-position athiti medium">
-          {type === "stonehenge"
-            ? textData.stonehenge[id].desc2
-            : textData.pyramid[id].desc2}
-        </p>
-
-        <p className="n-position athiti medium">
-          {id}/
-          {type === "stonehenge"
-            ? textData.stonehenge.length
-            : textData.pyramid.length}
-        </p>
       </div>
+      {type === "stonehenge"
+        ? {
+            0: <Stone1 />,
+            1: <Stone2 />,
+            2: <Stone3 />,
+            3: <Stone4 />,
+          }[id]
+        : {
+            0: <Pyramid1 />,
+            1: <Pyramid2 />,
+            2: <Pyramid3 />,
+          }[id]}
     </div>
   );
 };

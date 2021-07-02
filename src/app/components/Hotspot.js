@@ -41,7 +41,6 @@ const Hotspot = ({ id, type }) => {
       },
     });
 
-    console.log(show);
     setShow(false);
   };
   return (
