@@ -9,9 +9,10 @@ import {
   hoverBtn,
   removeHoverBtn,
   rotateLogoLoader,
+  goToIntroText,
 } from "../animations/animations";
 
-import Intro from "../view/Intro";
+import IntroText from "../components/IntroText";
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { click, stonSound } from "../animations/sounds";
@@ -35,18 +36,7 @@ export default function Home() {
 
   const moveToText = () => {
     click();
-    gsap.to(window, {
-      scrollTo: ".text_box",
-      duration: 0.5,
-    });
-
-    gsap.to("body", {
-      overflowY: "scroll",
-    });
-
-    gsap.to(".expand", {
-      css: { className: "cursor" },
-    });
+    goToIntroText();
   };
 
   return (
@@ -81,7 +71,7 @@ export default function Home() {
         <CanvasSky />
         <MovingStars />
       </div>
-      <Intro />
+      <IntroText />
     </>
   );
 }

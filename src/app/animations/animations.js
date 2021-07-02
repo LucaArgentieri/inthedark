@@ -6,98 +6,109 @@ gsap.registerPlugin(ScrollTrigger);
 
 const tl = gsap.timeline();
 
+export const goToIntroText = () => {
+  gsap.to(window, {
+    scrollTo: ".introtext_title",
+    duration: 0.5,
+  });
+
+  gsap.to("body", {
+    overflowY: "scroll",
+  });
+};
+
 export const animateHomeText = () => {
   gsap.fromTo(
-    ".title",
+    ".introtext_title p",
     {
       opacity: 0,
     },
     {
-      scrollTrigger: ".title",
+      scrollTrigger: ".introtext_title",
       duration: 1,
       opacity: 1,
     }
   );
 
   gsap.fromTo(
-    ".text1",
+    "introtext_column p",
     {
       opacity: 0,
     },
     {
-      scrollTrigger: ".text1",
+      scrollTrigger: "introtext_column",
       duration: 1,
       opacity: 1,
     }
   );
 
   gsap.fromTo(
-    ".text2",
+    ".introtext_column img",
     {
       opacity: 0,
     },
     {
-      scrollTrigger: ".text2",
+      scrollTrigger: ".introtext_column",
       duration: 1,
       opacity: 1,
     }
   );
 
   gsap.fromTo(
-    ".text3",
+    ".introtext_column2 p",
     {
       opacity: 0,
     },
     {
-      scrollTrigger: ".text3",
+      scrollTrigger: ".introtext_column2",
       duration: 1,
       opacity: 1,
     }
   );
 
   gsap.fromTo(
-    ".text4",
+    ".introtext_column .tre p",
     {
       opacity: 0,
     },
     {
-      scrollTrigger: ".text4",
+      scrollTrigger: ".introtext_column .tre",
       duration: 1,
       opacity: 1,
     }
   );
 
   gsap.fromTo(
-    ".text5",
+    ".introtext_column .tre img",
     {
       opacity: 0,
     },
     {
-      scrollTrigger: ".text5",
+      scrollTrigger: ".introtext_column .tre",
       duration: 1,
       opacity: 1,
     }
   );
 
   gsap.fromTo(
-    ".text6",
+    ".introtext_column2 .quattro p",
     {
       opacity: 0,
     },
     {
-      scrollTrigger: ".text6",
+      scrollTrigger: ".introtext_column2 .quattro",
       duration: 1,
       opacity: 1,
     }
   );
 
   gsap.fromTo(
-    ".text7",
+    ".introtext_column2 .quattro img",
     {
       opacity: 0,
     },
     {
-      scrollTrigger: ".text7",
+      scrollTrigger: ".introtext_column2 .quattro",
       duration: 1,
       opacity: 1,
     }

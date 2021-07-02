@@ -81,3 +81,55 @@
     }
   }
 }
+
+//Intro Text
+.introtext_title {
+  padding-top: 25px;
+
+  .sub {
+    width: 60%;
+  }
+}
+
+.introtext_column {
+  div {
+    padding: 50px;
+    width: 50%;
+
+    p {
+      letter-spacing: 2%;
+      line-height: 1.94;
+    }
+
+    img {
+      width: 500px;
+      padding-bottom: 50px;
+    }
+
+    img:nth-child(1) {
+      padding-left: 50px;
+    }
+  }
+}
+
+.introtext_column2 {
+  p {
+    padding: 50px;
+    letter-spacing: 2%;
+    line-height: 1.94;
+  }
+
+  .introbtn {
+    padding-bottom: 50px;
+
+    button {
+      border-radius: 60px;
+      border: none;
+      background-color: rgb(56, 14, 14);
+      padding: 10px 20px;
+      color: white;
+      letter-spacing: initial;
+      line-height: initial;
+    }
+  }
+}

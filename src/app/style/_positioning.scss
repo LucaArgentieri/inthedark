@@ -6,7 +6,15 @@
     align-items: center;
   }
 
+  &_hcenter {
+    justify-content: center;
+  }
+
   &_column {
     flex-direction: column;
+  }
+
+  &_reverse {
+    flex-direction: row-reverse;
   }
 }

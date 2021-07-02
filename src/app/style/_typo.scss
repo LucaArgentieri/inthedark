@@ -16,6 +16,10 @@ h6 {
   font-family: "Athiti", sans-serif;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .extralight {
   font-weight: 200;
 }
@@ -58,6 +62,7 @@ $fontsizes: (
   64: 64px,
   72: 72px,
   96: 96px,
+  123: 123px,
 );
 
 @each $key in map-keys($fontsizes) {
