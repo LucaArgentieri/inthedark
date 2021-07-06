@@ -11,7 +11,7 @@ export default function IntroText() {
   }, []);
 
   return (
-    <div>
+    <div className="intro_main">
       <div className="introtext_title flex flex_center flex_column">
         <p className="nobleman italic fs-123 ">Archeoastronomy</p>
         <p className="sub nobleman fs-96">A welcome into a world yet unknown</p>

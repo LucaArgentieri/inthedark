@@ -15,9 +15,23 @@ export const goToIntroText = () => {
   gsap.to("body", {
     overflowY: "scroll",
   });
+  // introButton
+ 
+  gsap.to(".introbtn", {
+    scrollTrigger: {
+        trigger: ".intro_main",
+        start: "top center",
+        toggleActions: "restart none none reverse",
+    },
+    display: "block",
+    opacity: 1,
+    transition: 1
+  });
+
 };
 
 export const animateHomeText = () => {
+
   gsap.fromTo(
     ".introtext_title p",
     {
