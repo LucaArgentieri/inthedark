@@ -19,7 +19,7 @@ export default function IntroText() {
 
       <div className="introtext_column flex">
         <div className="flex flex_hcenter">
-          <p className="fs-48 nobleman">
+          <p className="fs-48 noblemantext">
             L'archeoastronomia è una combinazione di studi astronomici e
             archeologici. Rappresenta la conoscenza e comprensione che gli
             antichi abitanti della terra avevano dei fenomeni celesti, di come
@@ -34,7 +34,7 @@ export default function IntroText() {
       </div>
 
       <div className="introtext_column2">
-        <p className="fs-48 nobleman">
+        <p className="fs-48 noblemantext">
           L'archeoastronomia considera in maniera riccamente simbolica le
           interpretazioni culturali dei più svariati fenomeni celesti, presenti
           in moltissime culture antiche. Questa disciplina è spesso gemellata
@@ -48,7 +48,7 @@ export default function IntroText() {
 
       <div className="introtext_column tre flex flex_reverse">
         <div className="flex flex_hcenter ">
-          <p className="fs-48 nobleman">
+          <p className="fs-48 noblemantext">
             Per favorire una migliore comprensione della documentazione storica
             l'archeoastronomia fa uso anche delle conoscenze astronomiche
             attuali. L'archeoastronomia utilizza una varietà di metodi per
@@ -64,7 +64,7 @@ export default function IntroText() {
       </div>
 
       <div className="introtext_column2 quattro">
-        <p className="fs-48 nobleman">
+        <p className="fs-48 noblemantext">
           L'archeoastronomia può essere applicata a tutte le culture e a tutte
           le epoche. I significati derivanti dall'osservazione del cielo possono
           variare da cultura a cultura; tuttavia esistono metodi scientifici che
