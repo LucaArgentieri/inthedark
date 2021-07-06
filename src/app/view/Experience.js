@@ -259,6 +259,9 @@ function App({ location }) {
         <Hotspot id="1" type="stonehenge" />
         <Hotspot id="2" type="stonehenge" />
         <Hotspot id="3" type="stonehenge" />
+        {/* <Hotspot id="0" type="gyza-pyramid" />
+        <Hotspot id="1" type="gyza-pyramid" />
+        <Hotspot id="2" type="gyza-pyramid" /> */}
 
         <Title>
           <Link

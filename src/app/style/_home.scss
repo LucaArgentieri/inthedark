@@ -5,27 +5,22 @@
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh;
-
   &_container {
     height: 100vh;
-
     .logo {
       height: 100px;
       margin-bottom: 70px;
     }
-
     p {
       padding-bottom: 10px;
-      text-align: center;
+      text-align: right !important;
       opacity: 0;
     }
-
     .subtitle {
       padding-bottom: 200px;
       z-index: 999;
       opacity: 0;
     }
-
     .enter_btn {
       cursor: pointer;
       z-index: 999;
@@ -33,7 +28,6 @@
       display: flex;
       flex-direction: column;
       opacity: 0;
-
       .line {
         border-bottom: 1px solid white;
         width: 100%;
@@ -42,7 +36,6 @@
       }
     }
   }
-
   canvas {
     position: absolute;
     top: 0;
@@ -50,7 +43,6 @@
     height: 100vh;
     overflow: hidden;
   }
-
   .stonehenge {
     overflow: hidden;
     img {
@@ -62,18 +54,15 @@
     }
   }
 }
-
 @media (max-width: 900px) {
   .home {
     .home_container {
       img {
         height: 50px;
       }
-
       .title {
         font-size: 48px;
       }
-
       .subtitle {
         padding-bottom: 50px;
         font-size: 24px;
@@ -81,44 +70,38 @@
     }
   }
 }
-
 //Intro Text
 .introtext_title {
-  padding-top: 25px;
-
-  .sub {
+padding: 25px 0 0 50px;
+}
+.sub {
     width: 60%;
   }
-}
-
 .introtext_column {
   div {
     padding: 50px;
     width: 50%;
-
     p {
+      text-align: justify;
       letter-spacing: 2%;
       line-height: 1.94;
     }
-
     img {
       width: 500px;
-      padding-bottom: 50px;
+      padding-bottom: 50px;  
+      padding-left: 50px;
     }
-
     img:nth-child(1) {
       padding-left: 50px;
     }
   }
 }
-
 .introtext_column2 {
   p {
     padding: 50px;
     letter-spacing: 2%;
     line-height: 1.94;
   }
-
   .introbtn {
     padding-bottom: 50px;
     position: fixed;

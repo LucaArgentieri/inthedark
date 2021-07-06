@@ -9,7 +9,7 @@ export const desertSound = new Audio(`${desert}`);
 export const stonehenge = new Audio(`${deep}`);
 
 const play = (audio) => {
-  if (audio == stonehenge || audio == desertSound) audio.volume = 0.5;
+  if (audio === stonehenge || audio === desertSound) audio.volume = 0.5;
   else audio.volume = 0.2;
 
   audio.play();

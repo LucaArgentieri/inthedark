@@ -47,7 +47,7 @@ export default function Home() {
             <>
               <img className="logo" src={Logo} alt="logo" />
               <p className="title c-white fs-96 nobleman upcase">in the dark</p>
-              <p className="subtitle athiti regular c-white fs-36">
+              <p className="subtitle nobleman regular c-white fs-36">
                 How the ancients discovered astronomy
               </p>
               <a

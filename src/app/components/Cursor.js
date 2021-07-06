@@ -12,12 +12,10 @@ const useDOMControl = (domFunc) => {
 };
 
 function Cursor() {
-  let img;
-
   const sketch = (p) => {
     let x = 1;
     let y = 1;
-    let easing = 0.05;
+    let easing = 0.07;
 
     p.setup = function () {
       p.createCanvas(p.windowWidth, p.windowHeight);

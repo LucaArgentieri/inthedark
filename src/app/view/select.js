@@ -27,7 +27,7 @@ export default function Select() {
           className="stonehenge flex flex_center flex_column"
         >
           <p className="nobleman c-white regular fs-64 upcase">stonehenge</p>
-          <p className="athiti regular fs-24 c-white">
+          <p className="nobleman regular fs-24 c-white">
             Discover the sky through the eyes of the ancients
           </p>
         </Link>
@@ -39,10 +39,10 @@ export default function Select() {
           onMouseLeave={(e) => removeOver(e)}
           onClick={() => clickGiza()}
         >
-          <p className="nobleman regular fs-48 upcase c-white">
+          <p className="nobleman regular fs-64 upcase c-white">
             piramide di cheope
           </p>
-          <p className="athiti regular fs-24 c-white">
+          <p className="nobleman regular fs-24 c-white">
             Discover the sky through the eyes of the ancients
           </p>
         </Link>

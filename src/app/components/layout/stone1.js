@@ -1,7 +1,6 @@
 import React from "react";
-import { textData } from "../../assets/data/text";
+import img from "../../assets/images/image0.png";
 
-console.log(textData);
 export default function Stone1() {
   return (
     <div className="stone1 flex flex_column">
@@ -12,7 +11,7 @@ export default function Stone1() {
       </div>
       <div className="text_container">
         <div>
-          <p className="nobleman fs-24">
+          <p className="noblemantext fs-24">
             The original axis of the site is oriented towards the dawn of the
             summer solstice and the first lights of dawn hit the Altar stone in
             the stone circle. In the same way, looking from the inside out, the
@@ -21,14 +20,14 @@ export default function Stone1() {
           </p>
         </div>
         <div>
-          <p className="nobleman fs-24">
+          <p className="noblemantext fs-24">
             The solstices were often associated with the ideas of renewal and
             rebirth, and it seems reasonable to assume that the religious
             ceremonies took place within the stone circle.
           </p>
         </div>
         <div>
-          <img src={textData.stonehenge[0].upperImage} alt="" />
+          <img src={img} alt="" />
         </div>
       </div>
     </div>
