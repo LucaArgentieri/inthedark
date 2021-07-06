@@ -7,69 +7,59 @@ h6 {
   font-family: "Nobleman";
   line-height: 130%;
 }
-
 .nobleman {
   font-family: "Nobleman";
 }
-
 .noblemantext {
   font-family: "NoblemanText";
 }
-
 .athiti {
   font-family: "Athiti", sans-serif;
 }
-
 .italic {
   font-style: italic;
 }
-
 .extralight {
   font-weight: 200;
 }
-
 .light {
   font-weight: 300;
 }
-
 .regular {
   font-weight: 400;
 }
-
 .medium {
   font-weight: 500;
 }
-
 .semibold {
   font-weight: 600;
 }
-
 .bold {
   font-weight: 700;
 }
-
 .text-center {
   text-align: center;
 }
-
 .upcase,
 .uppercase {
   text-transform: uppercase;
 }
-
 $fontsizes: (
   14: 14px,
   18: 18px,
   24: 24px,
+  30: 30px,
   36: 36px,
-  48: 48px,
+  38: 38px,   
+  44: 44px, 
+  56: 56px,
   64: 64px,
   72: 72px,
+  85: 85px,
   96: 96px,
-  123: 123px,
+  103: 103px,
   160: 160px,
 );
-
 @each $key in map-keys($fontsizes) {
   .fs-#{$key} {
     font-size: map-get($fontsizes, $key);
