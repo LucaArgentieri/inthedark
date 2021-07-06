@@ -1,5 +1,6 @@
 import React from "react";
-import { textData } from "../../assets/data/text";
+import img from "../../assets/images/image2.png";
+import img2 from "../../assets/images/image3.png";
 
 export default function Stone3() {
   return (
@@ -9,11 +10,11 @@ export default function Stone3() {
         <p className="nobleman fs-160 upcase"> OF STONEHENGE</p>
       </div>
       <div className="full">
-        <img src={textData.stonehenge[0].upperImage} alt="" />
+        <img src={img} alt="" />
       </div>
       <div className="text_container flex">
         <div>
-          <p className="nobleman fs-24">
+          <p className="noblemantext fs-24">
             The first to notice this alignment was William Stukeley, an English
             physician who made a great contribution in the study of the site of
             Stonehenge, due to the millenary motions of our planet the
@@ -23,8 +24,8 @@ export default function Stone3() {
           </p>
         </div>
         <div>
-          <img src={textData.stonehenge[0].upperImage} alt="" />
-          <p className="nobleman fs-24">
+          <img src={img2} alt="" />
+          <p className="noblemantext fs-24">
             Because of that, the point of sunrise and sunset at the solstices of
             the third millennium BC had to be slightly different from what we
             can observe today.

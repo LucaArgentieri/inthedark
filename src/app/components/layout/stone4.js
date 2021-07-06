@@ -12,7 +12,7 @@ export default function Stone4() {
 
       <div className="text_container flex">
         <div>
-          <p className="nobleman fs-24">
+          <p className="noblemantext fs-24">
             An interesting hypothesis is that of Newman of 1966 about the
             alignment of the lunar motions. The Station stones seem to describe
             a rectangle in which the two short sides are in the same direction
@@ -26,7 +26,7 @@ export default function Stone4() {
         </div>
         <div>
           <img src={textData.stonehenge[0].upperImage} alt="" />
-          <p className="nobleman fs-24">
+          <p className="noblemantext fs-24">
             It isn’t possible to exclude that the reason of the satellite of
             Stonehenge was chosen precisely because of that, but an action of
             this type would have required many repeated measures over the years
