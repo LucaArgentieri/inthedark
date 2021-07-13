@@ -232,6 +232,7 @@ function App({ location }) {
 
     stonehengeHotspots.current.forEach((h) => h.updateWorldMatrix(true, false))
 
+    let raf
     /* RAF function */
     const tick = () => {
       stonehengeHotspots.current.forEach((h, i) => {
@@ -240,7 +241,6 @@ function App({ location }) {
         // convert the normalized position to CSS coordinates
         const x = (tempV.x * 0.5 + 0.5) * canvas.clientWidth
         const y = (tempV.y * -0.5 + 0.5) * canvas.clientHeight
-
         const hotspot = document.querySelector(`#hotspot-${i}`)
         hotspot.style.transform = `translate(-50%, -50%) translate(${x}px,${y}px)`
       })
@@ -248,10 +248,12 @@ function App({ location }) {
       controls.update()
       // Render
       composer.render(scene, camera)
-      window.requestAnimationFrame(tick)
+      // console.log(id)
+      raf = window.requestAnimationFrame(tick)
     }
 
     tick()
+    return () => cancelAnimationFrame(raf)
   }, [hash])
 
   return (
