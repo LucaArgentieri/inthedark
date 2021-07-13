@@ -8,12 +8,10 @@ export default function IntroText() {
     animateHomeText();
   }, []);
   return (
-    <div>
-      <div className="introtext_title flex  flex_column">
-        <p className="nobleman italic fs-85">Archeoastronomy</p>
-        <p className="sub nobleman fs-44">A welcome into a 
-        <br>
-        </br>world yet unknown</p>
+    <div className="intro_main">
+      <div className="introtext_title flex flex_center flex_column">
+        <p className="nobleman italic fs-123 ">Archeoastronomy</p>
+        <p className="sub nobleman fs-96">A welcome into a world yet unknown</p>
       </div>
       <div className="introtext_column flex">
         <div className="flex flex_hcenter">
