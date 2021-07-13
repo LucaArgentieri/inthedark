@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import FirstIntro from "../assets/images/firstIntro.png";
-import SecondIntro from "../assets/images/secondIntro.png";
+import FirstIntro from "../assets/images/firstIntro.webp";
+import SecondIntro from "../assets/images/secondIntro.webp";
 import { animateHomeText } from "../animations/animations";
 export default function IntroText() {
   useEffect(() => {

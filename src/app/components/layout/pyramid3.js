@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../../assets/images/giza3.png";
+import img from "../../assets/images/giza3.webp";
 
 export default function pyramid3() {
   return (

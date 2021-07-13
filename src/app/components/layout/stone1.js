@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../../assets/images/image0.png";
+import img from "../../assets/images/image0.webp";
 
 export default function Stone1() {
   return (

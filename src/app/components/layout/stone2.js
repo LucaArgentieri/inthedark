@@ -1,6 +1,6 @@
 import React from "react";
-import img from "../../assets/images/image1.png";
-import img2 from "../../assets/images/image4.png";
+import img from "../../assets/images/image1.webp";
+import img2 from "../../assets/images/image4.webp";
 
 export default function Stone2() {
   return (

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Logo from "../assets/svg/logo.svg";
-import Stonehenge from "../assets/images/STONEHENGE.png";
+import Stonehenge from "../assets/images/STONEHENGE.webp";
 import CanvasSky from "../components/canvasSky";
 import MovingStars from "../components/movingStars";
 import {
