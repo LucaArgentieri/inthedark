@@ -171,13 +171,15 @@ function App({ location }) {
 
     const cubeTextureLoader = new THREE.CubeTextureLoader()
 
+    const envMapPath = isPyramid ? 'pyramidEnvMap' : 'stoneEnvMap'
+
     const environmentMap = cubeTextureLoader.load([
-      '../../../environmentMap/px.png',
-      '../../../environmentMap/nx.png',
-      '../../../environmentMap/py.png',
-      '../../../environmentMap/ny.png',
-      '../../../environmentMap/pz.png',
-      '../../../environmentMap/nz.png'
+      `../../../${envMapPath}/px.png`,
+      `../../../${envMapPath}/nx.png`,
+      `../../../${envMapPath}/py.png`,
+      `../../../${envMapPath}/ny.png`,
+      `../../../${envMapPath}/pz.png`,
+      `../../../${envMapPath}/nz.png`
     ])
 
     // gui.add(environmentMap.offset, 'x').min(-10).max(12).step(0.001)
@@ -217,7 +219,9 @@ function App({ location }) {
       var hblurPass = new ShaderPass(HorizontalTiltShiftShader)
       var vblurPass = new ShaderPass(VerticalTiltShiftShader)
       var bluriness = isPyramid ? 5 : 10
-      hblurPass.uniforms.r.value = vblurPass.uniforms.r.value = 0.4
+      hblurPass.uniforms.r.value = vblurPass.uniforms.r.value = isPyramid
+        ? 0.4
+        : 0.6
       var copyPass = new ShaderPass(CopyShader)
       copyPass.renderToScreen = true
       composer = new EffectComposer(renderer)
