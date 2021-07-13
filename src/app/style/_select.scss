@@ -64,3 +64,26 @@
     }
   }
 }
+
+@media (max-width: 900px) {
+  .select .logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+
+    img {
+      height: 50px;
+    }
+  }
+  .select .select_container {
+    flex-direction: column;
+    .stonehenge {
+      width: 100%;
+    }
+    .pyramid {
+      width: 100%;
+    }
+  }
+}

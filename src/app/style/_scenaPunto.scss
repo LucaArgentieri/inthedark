@@ -143,3 +143,68 @@
     pointer-events: all;
   }
 }
+
+@media (max-width: 900px) {
+  #hotspots .experience-logo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .a-bcg-body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    .a-bcg-body-container {
+      padding: 0px;
+    }
+  }
+  .stone1,
+  .stone2,
+  .stone3 {
+    .fs-24 {
+      font-size: 18px;
+    }
+    .fs-96 {
+      font-size: 38px;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+    .fs-160 {
+      font-size: 50px;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+    .text_container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+  .stone1 {
+    height: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .stone2 {
+    .text_container {
+      .flex {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  .stone3 .text_container div {
+    padding-right: 50px;
+    padding-left: 50px;
+    width: 100%;
+  }
+}
