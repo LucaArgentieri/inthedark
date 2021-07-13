@@ -23,7 +23,7 @@ export default function Stone3() {
             Sun
           </p>
         </div>
-        <div>
+        <div className="img2">
           <img src={img2} alt="" />
           <p className="noblemantext fs-24 bettertext">
             Because of that, the point of sunrise and sunset at the solstices of

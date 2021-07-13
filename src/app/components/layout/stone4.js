@@ -25,7 +25,7 @@ export default function Stone4() {
           </p>
         </div>
         <div>
-          <img src={textData.stonehenge[0].upperImage} alt="" />
+          <img src={textData.stonehenge[0].img4} alt="" />
           <p className="noblemantext fs-24 bettertext">
             It isn’t possible to exclude that the reason of the satellite of
             Stonehenge was chosen precisely because of that, but an action of

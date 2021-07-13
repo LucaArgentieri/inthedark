@@ -15,7 +15,7 @@ function Cursor() {
   const sketch = (p) => {
     let x = 1;
     let y = 1;
-    let easing = 0.07;
+    let easing = 0.15;
 
     p.setup = function () {
       p.createCanvas(p.windowWidth, p.windowHeight);

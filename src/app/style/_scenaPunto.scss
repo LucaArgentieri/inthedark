@@ -37,7 +37,7 @@
 
   .text_container {
     display: grid;
-    grid-template-columns: 4fr 4fr 4fr;
+    grid-template-columns: 3fr 4fr 5fr;
 
     p {
       padding-right: 20px;
@@ -45,7 +45,8 @@
     }
 
     img {
-      height: 70%;
+      height: auto;
+      width: 100%;
     }
   }
 }
@@ -71,7 +72,7 @@
     }
 
     img {
-      height: 50%;
+      width: 100%;
     }
   }
 }
@@ -82,6 +83,13 @@
   &::-webkit-scrollbar {
     display: none;
   }
+
+  .img2 {
+    img {
+      width: 100%;
+    }
+  }
+
   .full {
     height: 50vh;
     img {

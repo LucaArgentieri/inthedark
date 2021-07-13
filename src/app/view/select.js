@@ -40,7 +40,7 @@ export default function Select() {
           onClick={() => clickGiza()}
         >
           <p className="nobleman regular fs-64 upcase c-white">
-            piramide di cheope
+            Pyramid <br /> of Cheops
           </p>
           <p className="nobleman regular fs-24 c-white">
             Discover the sky through the eyes of the ancients

@@ -17,20 +17,17 @@ export default function IntroText() {
       <div className="introtext_column flex">
         <div className="flex flex_hcenter">
           <p className="fs-30 noblemantext">
-            L'archeoastronomia è una combinazione di studi astronomici e
-            archeologici. Rappresenta la conoscenza e comprensione che gli
-            antichi abitanti della terra avevano dei fenomeni celesti, di come
-            li hanno utilizzati ed interpretati e quale ruolo hanno svolto
-            all'interno delle loro culture.
-            <br /> L'archeoastronomia considera in maniera riccamente simbolica
-            le interpretazioni culturali dei più svariati fenomeni celesti,
-            presenti in moltissime culture antiche. Questa disciplina è spesso
-            gemellata con lo studio antropologico dell'osservazione del cielo
-            nelle società cosiddette primitive. L'archeoastronomia si avvale
-            anche dell'uso di documentazioni storiche, precedenti l'origine
-            della moderna disciplina astronomica, per studiare antichi eventi
-            astronomici ed è pertanto strettamente associata con l'astronomia
-            storica.
+            Archeoastronomy is the interdisciplinary or multidisciplinary study
+            of how people in the past "have understood the phenomena in the sky,
+            how they used these phenomena and what role the sky played in their
+            cultures”. Archeoastronomy considers in a richly symbolic way the
+            cultural interpretations of many celestial phenomena, present in
+            various ancient cultures. It is often twinned with ethnoastronomy,
+            the anthropological study of skywatching in contemporary societies.
+            This discipline is also closely associated with historical
+            astronomy, the use of historical records of heavenly events to
+            answer astronomical problems and the history of astronomy which uses
+            written records to evaluate past astronomical practice.
           </p>
         </div>
         <div className="flex flex_column flex_hcenter">
@@ -44,12 +41,11 @@ export default function IntroText() {
       <div className="introtext_column tre flex flex_reverse">
         <div className="flex flex_hcenter ">
           <p className="fs-30 noblemantext">
-            Per favorire una migliore comprensione della documentazione storica
-            l'archeoastronomia fa uso anche delle conoscenze astronomiche
-            attuali. L'archeoastronomia utilizza una varietà di metodi per
-            rinvenire le prove di pratiche del passato, tra cui archeologia,
-            antropologia, astronomia, storia, statistica e calcolo delle
-            probabilità.
+            Archeoastronomy makes use of current cultural knowledge to encourage
+            a better understanding of the historical documentation.
+            Archeoastronomy uses a variety of methods to uncover evidence of
+            past practices including archaeology, anthropology, astronomy,
+            statistics and probability, and history.
           </p>
         </div>
         <div className="flex flex_column flex_hcenter ">
@@ -58,12 +54,11 @@ export default function IntroText() {
       </div>
       <div className="introtext_column2 quattro">
         <p className="fs-30 noblemantext">
-          L'archeoastronomia può essere applicata a tutte le culture e a tutte
-          le epoche. I significati derivanti dall'osservazione del cielo possono
-          variare da cultura a cultura; tuttavia esistono metodi scientifici che
-          possono essere applicati trasversalmente all'interno delle culture
-          esaminando le antiche credenze ed attraverso i quali si può giungere
-          ad interpretazioni archeoastronomiche.
+          Archeoastronomy can be applied to all cultures and all time periods.
+          The meanings that come from the observation of the sky can depend from
+          culture to culture; however there are scientific methods which can be
+          applied across cultures when examining ancient beliefs and with which
+          we can reach archaeoastronomy interpretations.
         </p>
         <Link className="flex flex_center introbtn" to="/experience">
           <button className="fs-24 nobleman">
