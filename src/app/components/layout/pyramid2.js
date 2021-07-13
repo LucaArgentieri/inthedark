@@ -10,7 +10,7 @@ export default function pyramid2() {
       </div>
       <div className="text_container">
         <div className="flex pyramid1">
-          <p className="noblemantext fs-24">
+          <p className="noblemantext fs-24 bettertext">
             The attention to the sky by the Egyptians is not only found thanks
             to the astronomical orientation, in fact the pyramids were built in
             relation to the Orion belt, but also from the numerous references
@@ -20,7 +20,7 @@ export default function pyramid2() {
           <img src={img} alt="" />
         </div>
         <div className="flex">
-          <p className="noblemantext fs-24">
+          <p className="noblemantext fs-24 bettertext">
             The ventilation channels of the pyramid of Cheops at Giza point
             towards Orion and Sirius as they were positioned in 10,500 BC.
           </p>

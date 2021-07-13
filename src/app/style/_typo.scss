@@ -44,14 +44,21 @@ h6 {
 .uppercase {
   text-transform: uppercase;
 }
+
+.bettertext {
+  text-align: justify;
+  letter-spacing: 2%;
+  line-height: 1.94;
+}
+
 $fontsizes: (
   14: 14px,
   18: 18px,
   24: 24px,
   30: 30px,
   36: 36px,
-  38: 38px,   
-  44: 44px, 
+  38: 38px,
+  44: 44px,
   56: 56px,
   64: 64px,
   72: 72px,

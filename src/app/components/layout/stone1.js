@@ -11,7 +11,7 @@ export default function Stone1() {
       </div>
       <div className="text_container">
         <div>
-          <p className="noblemantext fs-24">
+          <p className="noblemantext fs-24 bettertext">
             The original axis of the site is oriented towards the dawn of the
             summer solstice and the first lights of dawn hit the Altar stone in
             the stone circle. In the same way, looking from the inside out, the
@@ -20,7 +20,7 @@ export default function Stone1() {
           </p>
         </div>
         <div>
-          <p className="noblemantext fs-24">
+          <p className="noblemantext fs-24 bettertext">
             The solstices were often associated with the ideas of renewal and
             rebirth, and it seems reasonable to assume that the religious
             ceremonies took place within the stone circle.

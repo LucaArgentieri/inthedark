@@ -11,7 +11,7 @@ export default function Stone2() {
       </div>
       <div className="text_container">
         <div className="flex">
-          <p className="noblemantext fs-24">
+          <p className="noblemantext fs-24 bettertext">
             The original axis of the site is oriented towards the dawn of the
             summer solstice and the first lights of dawn hit the Altar stone in
             the stone circle. In the same way, looking from the inside out, the
@@ -21,7 +21,7 @@ export default function Stone2() {
           <img src={img} alt="" />
         </div>
         <div className="flex">
-          <p className="noblemantext fs-24">
+          <p className="noblemantext fs-24 bettertext">
             An ancient prehistoric site in Wiltshire, England, near Amesbury,
             Stonehenge consists of an outer ring of vertical standing stones; it
             was built around the fifth millennium BC, during the so called

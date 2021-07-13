@@ -10,9 +10,10 @@ export default function IntroText() {
   return (
     <div className="intro_main">
       <div className="introtext_title flex flex_center flex_column">
-        <p className="nobleman italic fs-123 ">Archeoastronomy</p>
-        <p className="sub nobleman fs-96">A welcome into a world yet unknown</p>
+        <p className="nobleman italic fs-103 ">Archeoastronomy</p>
       </div>
+      <p className="sub nobleman fs-96">A welcome into a world yet unknown</p>
+
       <div className="introtext_column flex">
         <div className="flex flex_hcenter">
           <p className="fs-30 noblemantext">
@@ -21,14 +22,15 @@ export default function IntroText() {
             antichi abitanti della terra avevano dei fenomeni celesti, di come
             li hanno utilizzati ed interpretati e quale ruolo hanno svolto
             all'interno delle loro culture.
-          <br/> L'archeoastronomia considera in maniera riccamente simbolica le
-          interpretazioni culturali dei più svariati fenomeni celesti, presenti
-          in moltissime culture antiche. Questa disciplina è spesso gemellata
-          con lo studio antropologico dell'osservazione del cielo nelle società
-          cosiddette primitive. L'archeoastronomia si avvale anche dell'uso di
-          documentazioni storiche, precedenti l'origine della moderna disciplina
-          astronomica, per studiare antichi eventi astronomici ed è pertanto
-          strettamente associata con l'astronomia storica.
+            <br /> L'archeoastronomia considera in maniera riccamente simbolica
+            le interpretazioni culturali dei più svariati fenomeni celesti,
+            presenti in moltissime culture antiche. Questa disciplina è spesso
+            gemellata con lo studio antropologico dell'osservazione del cielo
+            nelle società cosiddette primitive. L'archeoastronomia si avvale
+            anche dell'uso di documentazioni storiche, precedenti l'origine
+            della moderna disciplina astronomica, per studiare antichi eventi
+            astronomici ed è pertanto strettamente associata con l'astronomia
+            storica.
           </p>
         </div>
         <div className="flex flex_column flex_hcenter">
@@ -37,8 +39,7 @@ export default function IntroText() {
         </div>
       </div>
       <div className="introtext_column2">
-        <p className="fs-30 noblemantext">
-        </p>
+        <p className="fs-30 noblemantext"></p>
       </div>
       <div className="introtext_column tre flex flex_reverse">
         <div className="flex flex_hcenter ">

@@ -86,16 +86,21 @@
     height: 50vh;
     img {
       height: 100%;
+      width: 100%;
     }
   }
   .text_container {
     padding-top: 50px;
     div {
       width: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
+      padding-right: 50px;
+    }
+  }
+
+  &_img {
+    img {
+      width: 100%;
+      height: auto;
     }
   }
 }

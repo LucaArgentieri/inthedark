@@ -72,11 +72,13 @@
 }
 //Intro Text
 .introtext_title {
-padding: 25px 0 0 50px;
+  padding: 25px 0 0 50px;
 }
 .sub {
-    width: 60%;
-  }
+  text-align: left;
+  width: 50%;
+  padding-left: 50px;
+}
 .introtext_column {
   div {
     padding: 50px;
@@ -88,7 +90,7 @@ padding: 25px 0 0 50px;
     }
     img {
       width: 500px;
-      padding-bottom: 50px;  
+      padding-bottom: 50px;
       padding-left: 50px;
     }
     img:nth-child(1) {

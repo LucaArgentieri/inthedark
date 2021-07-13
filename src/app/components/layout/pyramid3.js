@@ -10,7 +10,7 @@ export default function pyramid3() {
       </div>
       <div className="text_container">
         <div className="flex pyramid1">
-          <p className="noblemantext fs-24">
+          <p className="noblemantext fs-24 bettertext">
             This thesis is suggested by Bauval and Gilbert, later known as the
             Orion Correlation Theory on the existence of a perfect coincidence
             between the arrangement of the Orion Belt three stars and that of
@@ -21,7 +21,7 @@ export default function pyramid3() {
           <img src={img} alt="" />
         </div>
         <div className="flex">
-          <p className="noblemantext fs-24">
+          <p className="noblemantext fs-24 bettertext">
             According to more accurate studies it emerged that in any case the
             ducts, classified as aeration channels of the pyramid of Cheops,
             really fulfilled the function of stellar goals but with dating
