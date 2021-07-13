@@ -180,13 +180,17 @@ function App({ location }) {
       circleMesh1.position.set(17.85, 19.5, -8.69)
       circleMesh2.position.set(-14.3, 19.89, 25)
       circleMesh3.position.set(-22.5, 19.98, -24)
+    } else {
+      circleMesh1.position.set(26, -10, -26)
+      circleMesh2.position.set(-10.96, 44.53, 21.98)
+      circleMesh3.position.set(-50.84, -21.36, -30.03)
     }
 
     stonehengeHotspots.current = [circleMesh1, circleMesh2, circleMesh3]
 
-    // gui.add(circleMesh1.position, 'x').min(-24).max(25).step(0.001)
-    // gui.add(circleMesh1.position, 'y').min(-24).max(25).step(0.001)
-    // gui.add(circleMesh1.position, 'z').min(-24).max(25).step(0.001)
+    /* gui.add(circleMesh1.position, 'x').min(-80).max(80).step(0.001)
+    gui.add(circleMesh1.position, 'y').min(-80).max(80).step(0.001)
+    gui.add(circleMesh1.position, 'z').min(-80).max(80).step(0.001) */
 
     // scene.scale(1.4);
     /*
