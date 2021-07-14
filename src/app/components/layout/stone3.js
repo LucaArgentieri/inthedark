@@ -5,14 +5,14 @@ import img2 from "../../assets/images/image3.webp";
 export default function Stone3() {
   return (
     <div className="stone3 flex flex_column">
-      <div>
+      <div className="title">
         <p className="nobleman fs-96 upcase">archeoastronomy</p>
         <p className="nobleman fs-160 upcase"> OF STONEHENGE</p>
       </div>
       <div className="stone3_img full">
         <img src={img} alt="" />
       </div>
-      <div className="text_container flex">
+      <div className="text_container stone flex">
         <div>
           <p className="noblemantext fs-24 bettertext">
             The first to notice this alignment was William Stukeley, an English

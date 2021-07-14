@@ -4,7 +4,7 @@ import { textData } from "../../assets/data/text";
 export default function Stone4() {
   return (
     <div className="stone3 flex flex_column">
-      <div>
+      <div className="title2">
         <p className="nobleman fs-96 upcase">1966 - newman </p>
         <p className="nobleman fs-160 upcase"> STONEHENGE’s</p>
         <p className="nobleman fs-96 upcase">HYPOTHESIS </p>

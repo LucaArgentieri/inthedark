@@ -3,7 +3,7 @@ import img from "../../assets/images/image0.webp";
 
 export default function Stone1() {
   return (
-    <div className="stone1 flex flex_column">
+    <div className="stone1 margintop flex flex_column">
       <div>
         <p className="nobleman fs-96 upcase">what was</p>
         <p className="nobleman fs-160 upcase">stonehenge</p>

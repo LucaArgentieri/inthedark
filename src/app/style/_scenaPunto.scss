@@ -184,6 +184,10 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
+
+      p {
+        padding: 50px;
+      }
     }
   }
 
@@ -192,9 +196,15 @@
     padding-left: 50px;
     padding-right: 50px;
   }
+  .margintop {
+    margin-top: 500px;
+  }
 
   .stone2 {
     .text_container {
+      p {
+        padding: 50px;
+      }
       .flex {
         display: flex;
         flex-direction: column;
@@ -202,9 +212,41 @@
     }
   }
 
+  .stone3 {
+    .text_container {
+      p {
+        padding: 25px;
+      }
+    }
+
+    .stone {
+      p {
+        margin: 60px;
+      }
+    }
+
+    .title {
+      margin: 50px;
+      p {
+        font-size: 30px;
+        margin-left: 50px;
+        margin-right: 50px;
+        padding: 0px;
+      }
+    }
+
+    .title2 {
+      .nobleman {
+        font-size: 30px;
+        margin-left: 50px;
+        margin-right: 50px;
+        padding: 0px;
+      }
+    }
+  }
+
   .stone3 .text_container div {
-    padding-right: 50px;
-    padding-left: 50px;
     width: 100%;
+    padding-right: 0px;
   }
 }
