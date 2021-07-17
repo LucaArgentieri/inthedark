@@ -190,22 +190,30 @@ function App({ location }) {
     const circleMesh1 = new THREE.Mesh(circleGeometry, circleMaterial)
     const circleMesh2 = new THREE.Mesh(circleGeometry, circleMaterial)
     const circleMesh3 = new THREE.Mesh(circleGeometry, circleMaterial)
+    const circleMesh4 = new THREE.Mesh(circleGeometry, circleMaterial)
 
     if (!isPyramid) {
       circleMesh1.position.set(17.85, 19.5, -8.69)
       circleMesh2.position.set(-14.3, 19.89, 25)
       circleMesh3.position.set(-22.5, 19.98, -24)
+      circleMesh4.position.set(-31, 25.45, 9)
     } else {
       circleMesh1.position.set(26, -10, -26)
       circleMesh2.position.set(-10.96, 44.53, 21.98)
       circleMesh3.position.set(-50.84, -21.36, -30.03)
+      circleMesh4.position.set(28, -12.69, 65)
     }
 
-    stonehengeHotspots.current = [circleMesh1, circleMesh2, circleMesh3]
+    stonehengeHotspots.current = [
+      circleMesh1,
+      circleMesh2,
+      circleMesh3,
+      circleMesh4
+    ]
 
-    /* gui.add(circleMesh1.position, 'x').min(-80).max(80).step(0.001)
-    gui.add(circleMesh1.position, 'y').min(-80).max(80).step(0.001)
-    gui.add(circleMesh1.position, 'z').min(-80).max(80).step(0.001) */
+    // gui.add(circleMesh4.position, 'x').min(-80).max(80).step(0.001)
+    // gui.add(circleMesh4.position, 'y').min(-80).max(80).step(0.001)
+    // gui.add(circleMesh4.position, 'z').min(-80).max(80).step(0.001)
 
     // scene.scale(1.4);
     /*
@@ -281,10 +289,10 @@ function App({ location }) {
     <>
       <canvas id="webgl" ref={webgl}></canvas>
       <div id="hotspots" ref={HContainer}>
-        <Hotspot id="0" type="stonehenge" />
-        <Hotspot id="1" type="stonehenge" />
-        <Hotspot id="2" type="stonehenge" />
-        <Hotspot id="3" type="stonehenge" />
+        <Hotspot id="0" type={isPyramid ? 'gyza-pyramid' : 'stonehenge'} />
+        <Hotspot id="1" type={isPyramid ? 'gyza-pyramid' : 'stonehenge'} />
+        <Hotspot id="2" type={isPyramid ? 'gyza-pyramid' : 'stonehenge'} />
+        <Hotspot id="3" type={isPyramid ? 'gyza-pyramid' : 'stonehenge'} />
         {/* <Hotspot id="0" type="gyza-pyramid" />
         <Hotspot id="1" type="gyza-pyramid" />
         <Hotspot id="2" type="gyza-pyramid" /> */}
