@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Logo from "../assets/svg/logo.svg";
+import Logo2 from "../assets/svg/logo2.svg";
+
 import Stonehenge from "../assets/images/STONEHENGE.webp";
 import CanvasSky from "../components/canvasSky";
 import MovingStars from "../components/movingStars";
@@ -45,7 +47,7 @@ export default function Home() {
         <div className="home_container flex flex_center flex_column">
           {isLoading ? (
             <>
-              <img className="logo" src={Logo} alt="logo" />
+              <img className="logo" src={Logo2} alt="logo" />
               <p className="title c-white fs-96 nobleman upcase">in the dark</p>
               <p className="subtitle nobleman regular c-white fs-36">
                 How the ancients discovered astronomy
