@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react'
 import Logo from '../assets/svg/logo.svg'
-// import * as dat from 'dat.gui'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
@@ -122,25 +121,22 @@ function App({ location }) {
       gsap.to(camera.position, {
         x: -8,
         y: 4.5,
-        z: 4.5,
+        z: window.innerWidth < 750 ? 5.5 : 4.5,
         duration: 4,
         delay: 0.2,
         ease: Power4.easeInOut
       })
     } else {
       gsap.to(camera.position, {
-        x: 5.497,
+        x: window.innerWidth < 750 ? 7 : 5.497,
         y: 1.16,
-        z: -9.67,
+        z: window.innerWidth < 750 ? -14.87 : -9.67,
         duration: 4,
         delay: 0.2,
         ease: Power4.easeInOut
       })
     }
 
-    // gui.add(camera.position, 'x').min(-20).max(20).step(0.001).name('X Cam')
-    // gui.add(camera.position, 'y').min(-20).max(20).step(0.001).name('Y Cam')
-    // gui.add(camera.position, 'z').min(-20).max(20).step(0.001).name('Z Cam')
     scene.add(camera)
     const renderer = new THREE.WebGLRenderer({
       canvas
@@ -271,7 +267,9 @@ function App({ location }) {
         const x = (tempV.x * 0.5 + 0.5) * canvas.clientWidth
         const y = (tempV.y * -0.5 + 0.5) * canvas.clientHeight
         const hotspot = document.querySelector(`#hotspot-${i}`)
-        hotspot.style.transform = `translate(-50%, -50%) translate(${x}px,${y}px)`
+        if (hotspot) {
+          hotspot.style.transform = `translate(-50%, -50%) translate(${x}px,${y}px)`
+        }
       })
 
       controls.update()
@@ -283,7 +281,7 @@ function App({ location }) {
 
     tick()
     return () => cancelAnimationFrame(raf)
-  }, [hash])
+  }, [hash, isPyramid])
 
   return (
     <>
