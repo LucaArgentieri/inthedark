@@ -27,6 +27,17 @@ export const goToIntroText = () => {
     opacity: 1,
     transition: 1,
   });
+
+  gsap.to(".introbtn", {
+    scrollTrigger: {
+      trigger: ".intro_main",
+      start: "top center",
+      toggleActions: "restart none none reverse",
+    },
+    display: "block",
+    opacity: 1,
+    transition: "opacity 1s",
+  });
 };
 
 export const animateHomeText = () => {
