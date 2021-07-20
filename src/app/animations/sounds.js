@@ -1,6 +1,6 @@
 import bird from "../assets/mp3/hover/bird.mp3";
-import desert from "../assets/mp3/atmospheric/desert.mp3";
-import deep from "../assets/mp3/atmospheric/deep.mp3";
+import desert from "../assets/mp3/atmospheric/desert-trim.ogg";
+import deep from "../assets/mp3/atmospheric/deep-trim.ogg";
 import swoop from "../assets/mp3/transitions/dry_swoop.mp3";
 
 export const hoverSound = new Audio(`${bird}`);

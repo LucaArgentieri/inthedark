@@ -170,12 +170,12 @@ function App({ location }) {
     const envMapPath = isPyramid ? "pyramidEnvMap" : "stoneEnvMap";
 
     const environmentMap = cubeTextureLoader.load([
-      `../../../${envMapPath}/px.png`,
-      `../../../${envMapPath}/nx.png`,
-      `../../../${envMapPath}/py.png`,
-      `../../../${envMapPath}/ny.png`,
-      `../../../${envMapPath}/pz.png`,
-      `../../../${envMapPath}/nz.png`,
+      `../../../${envMapPath}/px.webp`,
+      `../../../${envMapPath}/nx.webp`,
+      `../../../${envMapPath}/py.webp`,
+      `../../../${envMapPath}/ny.webp`,
+      `../../../${envMapPath}/pz.webp`,
+      `../../../${envMapPath}/nz.webp`,
     ]);
 
     // gui.add(environmentMap.offset, 'x').min(-10).max(12).step(0.001)
