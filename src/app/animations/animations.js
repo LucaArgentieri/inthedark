@@ -181,8 +181,9 @@ export const rotateLogo = () => {
       opacity: 0,
     },
     {
-      duration: 2,
-      rotateZ: 180,
+      duration: 3,
+      rotateZ: 360,
+      rotateY: 360,
       opacity: 0.95,
     }
   );

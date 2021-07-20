@@ -23,17 +23,8 @@ body::before {
       transform-origin: center center;
       animation-name: spin;
       animation-duration: 4000ms;
-      animation-iteration-count: infinite;
+      animation-iteration-count: 1;
       animation-timing-function: linear;
-
-      @keyframes spin {
-        from {
-          transform: rotate(0deg);
-        }
-        to {
-          transform: rotate(360deg);
-        }
-      }
     }
     p {
       padding-bottom: 10px;
