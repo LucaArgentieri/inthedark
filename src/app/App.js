@@ -6,10 +6,14 @@ import Select from "./view/select";
 import ErrorPage from "../app/view/error";
 import Experience from "../app/view/Experience";
 
+import { ImageMount } from "./components/ImageMount";
+
 function App() {
+  ImageMount();
   window.onbeforeunload = function () {
     window.scrollTo(0, 0);
   };
+
   return (
     <>
       <Router>

@@ -16,22 +16,20 @@ export const goToIntroText = () => {
     overflowY: "scroll",
   });
   // introButton
- 
+
   gsap.to(".introbtn", {
     scrollTrigger: {
-        trigger: ".intro_main",
-        start: "top center",
-        toggleActions: "restart none none reverse",
+      trigger: ".intro_main",
+      start: "top center",
+      toggleActions: "restart none none reverse",
     },
     display: "block",
     opacity: 1,
-    transition: 1
+    transition: 1,
   });
-
 };
 
 export const animateHomeText = () => {
-
   gsap.fromTo(
     ".introtext_title p",
     {
@@ -185,7 +183,7 @@ export const rotateLogo = () => {
     {
       duration: 2,
       rotateZ: 180,
-      opacity: 1,
+      opacity: 0.95,
     }
   );
 };

@@ -47,7 +47,7 @@ export default function Home() {
         <div className="home_container flex flex_center flex_column">
           {isLoading ? (
             <>
-              <img className="logo" src={Logo2} alt="logo" />
+              <img className="logo" src={Logo} alt="logo" />
               <p className="title c-white fs-96 nobleman upcase">in the dark</p>
               <p className="subtitle nobleman regular c-white fs-36">
                 How the ancients discovered astronomy
