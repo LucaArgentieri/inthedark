@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import FirstIntro from "../assets/images/firstIntro.webp";
 import SecondIntro from "../assets/images/secondIntro.webp";
 import { animateHomeText } from "../animations/animations";
+import { click, hover } from "../animations/sounds";
 export default function IntroText() {
   useEffect(() => {
     animateHomeText();
@@ -61,7 +62,11 @@ export default function IntroText() {
           we can reach archaeoastronomy interpretations.
         </p>
         <Link className="flex flex_center introbtn" to="/experience">
-          <button className="fs-24 nobleman">
+          <button
+            onMouseEnter={() => hover()}
+            onClick={() => click()}
+            className="fs-24 nobleman"
+          >
             Archeoastronomy <br /> sites
           </button>
         </Link>
